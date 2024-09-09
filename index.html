@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAMOS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <img src="img/logo.png" alt="Logo" style="width: 18vh; height: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-start" aria-controls="navbar-start" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-start">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Carreras Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-dropdown-arrow" href="#" id="carrerasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Carreras
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="carrerasDropdown">
+                            <li><a class="dropdown-item" href="#">Carrera 1</a></li>
+                            <li><a class="dropdown-item" href="#">Carrera 2</a></li>
+                            <li><a class="dropdown-item" href="#">Carrera 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">             
+                        <a class="nav-link" href="#">Planes de pago</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-dropdown-arrow" href="#" id="empresasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Empresas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="empresasDropdown">
+                            <li><a class="dropdown-item" href="#">Empresa 1</a></li>
+                            <li><a class="dropdown-item" href="#">Empresa 2</a></li>
+                            <li><a class="dropdown-item" href="#">Empresa 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-aplicar" href="#">Aplicar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<section class="first">
+    <div class="containerpr">
+      <!-- Contenedor principal -->
+      <div class="content-wrapper">
+        <!-- Columna de Texto -->
+        <div class="text-column">
+          <h1>Le apostamos a tu educación</h1>
+          <p style="color: black !important;">¿Quieres estudiar y necesitas financiamiento? ¿Estás por terminar
+            tus estudios superiores, o ya terminaste y quieres seguir
+            capacitándote?
+          </p>
+          <p style="font-size: 2vw; color: black; font-weight: 500;">Vamos, ya está en tus manos</p>
+          <a href="#" class="btnaplicar">Aplicar</a>
+        </div>
+        <!-- Columna de Imagen -->
+        <div class="image-column">
+          <img src="img/1.jpeg" alt="Imagen de ejemplo">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="second">
+    <div class="container">
+      <div class="content">
+        <!-- Columna izquierda: Texto -->
+        <div class="text-left">
+          <p>Está en tus manos</p>
+          <h4>Invertir en tu educación<br> es posible para tener<br> mayores impactos en la<br> empleabilidad y calidad<br> de vida.</h4>
+        </div>
+        <!-- Columna derecha: Cajas -->
+        <div class="text-right">
+            <div class="box teal-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send-2 custom-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
+                <path d="M6.5 12h14.5" />
+              </svg>
+              <h5>Comienza ahora mismo y estudia eso que requieres para fortalecer tus habilidades profesionales y personales.</h5>
+            </div>
+            <div class="box green-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-briefcase-2 custom-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
+                <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+              </svg>
+              <h5> ¿Qué es lo mejor de todo? Financiamos tus estudios y lo pagas cuando consigas tu nuevo empleo</h5>
+            </div>
+          </div>          
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="ten">
+    <div class="container">
+        <div class="text">
+            En vamos diseñamos un acuerdo de ingresos compartidos en el que financiamos tus estudios<br> y lo pagas cuando<br> consigas tu nuevo<br> empleo.
+        </div>
+        <div class="percentages">
+            <div class="percentage">
+                <div class="value">0%</div>
+                <div class="label">Costo inicial</div>
+            </div>
+            <div class="percentage">
+                <div class="value">15%</div>
+                <div class="label">de tus ingresos</div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+
+<section class="third">
+    <div class="main-container">
+        <h1>Los mejores Bootcamps utilizando metodogías únicas para el desarrollo de:</h1>
+        <div class="cards-container">
+            <div class="card tech">
+                <h2>Tecnología</h2>
+                <p>Responsabilidad, comunicación, autogestión<br> emocional, pensamiento crítico, trabajo en equipo y<br> liderazgo, motivación</p>
+                <div class="costs">Costos</div>
+                <button class="apply-btn">Aplicar</button>
+                <div class="icon2"><img src="img/rendimiento.png"></div>
+            </div>
+            <div class="card power">
+                <h2>Power skills</h2>
+                <p>Responsabilidad, comunicación, autogestión,<br> emocional, pensamiento crítico, trabajo en equipo y<br> liderazgo, motivación</p>
+                <div class="costs">Costos</div>
+                <button class="apply-btn2">Aplicar</button>
+                <div class="icon"><img src="img/desarrollador.png"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="fourth">
+    <div class="container mt-5 pt-5 section">
+        <div class="row justify-content-center">
+            <!-- Lado izquierdo -->
+            <div class="col-md-6 d-flex flex-column justify-content-center mx-auto">
+                <h1>¿Qué es vamos?</h1>
+                <p style="margin-bottom: 30px;"></p>
+                <p>Somos una fintech dedicada a financiar proyectos educativos para
+                    acortar la brecha entre la industria y la academia, ofreciendo a nuestros
+                    estudiantes programas de desarrollo profesional así como de power
+                    skills, para generar mayores ofertas de empleos mejorando su calidad
+                    de vida.
+                </p>
+                <p style="margin-bottom: 50px;"></p>
+                <p>
+                    Somos un grupo apasionado por la educación desde hace más de 27
+                    años y seguimos proporcionando diferentes formas de generar cambios
+                    trascendentales a través de la educación.
+                </p>
+                <div>
+                    <img src="img/3.jpeg" alt="Imagen 1" class="img-thumbnail">
+                    <img src="img/4.png" alt="Imagen 2" class="img-thumbnail">
+                    <img src="img/5.png" alt="Imagen 3" class="img-thumbnail">
+                </div>
+            </div>
+            <!-- Lado derecho -->
+            <div class=" mag col-md-6 p-0">
+                <img src="img/2.jpeg" alt="Imagen Grande" class="img-fluid ">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fifth">
+    <div class="container">
+        <h1>¿Cómo lo hacemos?</h1>
+        <p class="subtitle">Una experiencia de aprendizaje dinámica y colaborativa.</p>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="img/6.jpeg" alt="Diagnósticos Profesionales">
+                </div>
+                <div class="card-content">
+                    <p class="card-title">Diagnósticos Profesionales</p>
+                    <p class="card-description">para detectar al talento y sus competencias</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="img/9.jpeg" alt="Diagnóstico Crediticio">
+                </div>
+                <div class="card-content">
+                    <p class="card-title">Diagnostico crediticio</p>
+                    <p class="card-description">para reducir la morosidad de los alumnos</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="img/7.jpeg" alt="Alto rendimiento">
+                </div>
+                <div class="card-content">
+                    <p class="card-title">Ofrecemos Alto rendimiento</p>
+                    <p class="card-description">A inversionistas con el mínimo riesgo gracias al talento que se evalúa en nuestros estudiantes</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="img/10.jpeg" alt="Segmento de alto valor">
+                </div>
+                <div class="card-content">
+                    <p class="card-title">Segmento de alto valor</p>
+                    <p class="card-description">Vamos dirigidos a un Segmento de alto valor con talento reduciendo el riesgo de nuestros usuarios</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="img/8.jpeg" alt="Vinculamos al talento">
+                </div>
+                <div class="card-content">
+                    <p class="card-title">Vinculamos</p>
+                    <p class="card-description">al talento con la industria laboral</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="img/11.jpeg" alt="% destinado a Educo AC">
+                </div>
+                <div class="card-content">
+                    <p class="card-title">% destinado a Educo AC</p>
+                    <p class="card-description">para otorgar de forma autosustentable mayores becas a estos jóvenes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sixth">
+    <div class="container-fluid mt-5 pt-5 section">
+        <div class="text-center mb-4">
+            <h2>Ofrecemos una oportunidad que</h2>
+            <h2>cambiará tu vida</h2>
+        </div>
+        
+        <!-- Primera Fila -->
+        <div class="row align-items-center mb-5 no-gutters">
+            <!-- Imagen derecha -->
+            <div class="col-md-6 order-md-2 p-0">
+                <img src="img/12.jpeg" alt="Imagen de trabajo" class="img-fluid w-100">
+            </div>
+            <!-- Texto izquierda -->
+            <div class="col-md-6 order-md-1">
+                <h3>Trabajo</h3>
+                <p>Los jóvenes obtendrán mejores oportunidades laborales gracias a su capacitación en estos Bootcamps donde tendrán la oportunidad de integrar las Hard Skills y Power skills requeridas para un mejor desempeño personal y profesional.</p>
+            </div>
+        </div>
+    
+        <!-- Segunda Fila -->
+        <div class="row align-items-center mb-5 no-gutters">
+            <!-- Imagen izquierda -->
+            <div class="col-md-6 order-md-1 p-0">
+                <img src="img/13.jpeg" alt="Imagen de educación" class="img-fluid w-100">
+            </div>
+            <!-- Texto derecha -->
+            <div class="col-md-6 order-md-2">
+                <h3>Educación</h3>
+                <p>Estamos convencidos que a través de un proceso de auto-conocimiento lograrás tener la educación que la nueva humanidad necesita, ofreciendo herramientas y prácticas para generar mayor crecimiento en el desarrollo intra e interpersonal.</p>
+            </div>
+        </div>
+    
+        <!-- Tercera Fila -->
+        <div class="row align-items-center mb-5 no-gutters">
+            <!-- Imagen derecha -->
+            <div class="col-md-6 order-md-2 p-0">
+                <img src="img/14.jpeg" alt="Imagen de tecnología" class="img-fluid w-100">
+            </div>
+            <!-- Texto izquierda -->
+            <div class="col-md-6 order-md-1">
+                <h3>Tecnología</h3>
+                <p>Con el uso de la tecnología podremos aprovechar los recursos para acercarnos a estos programas donde ejercitarán sus habilidades duras y blandas para su mejor desarrollo, acompañados de profesionales para integrar en sus campos laborales los contenidos aprendidos.</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<section class="eleven">
+    <div id="carouselExample" class="carousel slide mt-3" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex">
+                    <img src="img/16.jpeg" alt="Imagen pequeña 1" class="me-3">
+                    <div>
+                        <h6>Catalina Arteaga</h6>
+                        <p>“Las Power skills no sólo sirven como un beneficio curricular,
+                            sino que son necesarias para el desarrollo de un mejor futuro,
+                            tanto para nosotros como para el impacto que podemos
+                            generar”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex">
+                    <img src="img/16.jpeg" alt="Imagen pequeña 2" class="me-3">
+                    <div>
+                        <h6>Catalina Arteaga</h6>
+                        <p>“Las Power skills no sólo sirven como un beneficio curricular,
+                            sino que son necesarias para el desarrollo de un mejor futuro,
+                            tanto para nosotros como para el impacto que podemos
+                            generar”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex">
+                    <img src="img/16.jpeg" alt="Imagen pequeña 3" class="me-3">
+                    <div>
+                        <h6>Catalina Arteaga</h6>
+                        <p>“Las Power skills no sólo sirven como un beneficio curricular,
+                            sino que son necesarias para el desarrollo de un mejor futuro,
+                            tanto para nosotros como para el impacto que podemos
+                            generar”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+<section class="seventh">
+        <div class="container mt-5 pt-5 section">
+          <div class="row">
+              <!-- Título y texto mediano en la parte superior -->
+              <div class="col-md-12">
+                  <h2 class="fw-bold">¿Cómo aplicar?</h2>
+                  <p class="lead">Estas a un click de demostrarte que puedes hacer realidad tu fortalecimiento de habilidades</p>
+              </div>
+          </div>
+      
+          <div class="row mt-4">
+              <div class="col-md-4">
+                  <div class="bg-light p-3 rounded">
+                      <h4>1 DIagnostico de competencias</h4>
+                      <h6>5 minutos</h6>
+                      <p>Empieza por clickear el boton de Aplicar
+                          No es necesario que tengas
+                          conocimientos previos
+                      </p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="bg-light p-3 rounded">
+                      <h4>2 Evaluacion crediticia</h4>
+                      <h6>20 hrs aprox</h6>
+                      <p>Accede al Curso Preparatorio donde 
+                          podras aprender todos los conceptos
+                          necesarios para ingresar a Henry.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="bg-light p-3 rounded">
+                      <h4>3 Elije el Boot camp</h4>
+                      <h6>8 hrs aprox</h6>
+                      <p>Realiza un desafio tecnico donde
+                          deberas demostrar que estas listo
+                          para empezar la carrera
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-md-12 text-start">
+                  <a href="#" class="btn btn-primary">Aplicar</a>
+              </div>
+          </div>
+      </div>
+</section>
+<section class="eighth">
+        <div class="container mt-5 pt-5 section">
+          <div class="row">
+              <div class="col-md-12">
+                  <h2 class="fw-bold">Preguntas frecuentes</h2>
+                  <p class="lead">Quick answers to questions you may have. Can't find what you're looking for? Check out our <span class="text-primary">full documentation.</span> </p>
+              </div>
+          </div>
+          <div class="accordion mt-4" id="accordionExample">
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          ¿Quienes somos?
+                      </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          Yes, you can try us for free for 30 days. If you want, we'll provide you with a free 30-minute
+                          onboarding call to get you up and running.
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          ¿Como aplicar para el financiamiento de mis estudios?
+                      </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          Aqui van las respuestas de las preguntas
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          ¿Que carreras ofrecen?
+                      </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          Aqui van las respuestas de las preguntas
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          ¿Como invertir en Vamos?
+                      </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          Aqui van las respuestas de las preguntas
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          ¿Quienes son los beneficiados?
+                      </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          Aqui van las respuestas de las preguntas
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          ¿Que empresas forman parte de los programas?
+                      </button>
+                  </h2>
+                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          Aqui van las respuestas de las preguntas
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                          Diagnósticos crediticios
+                      </button>
+                  </h2>
+                  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          Aqui van las respuestas de las preguntas
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</section>
+<section class="ninth">
+        <div class="container mt-5 pt-5 section">
+          <div class="row">
+              <div class="col-md-12 d-flex flex-column align-items-start">
+                  <img src="img/15.jpeg" alt="Logo pequeño" class="mb-2">
+                  <p class="mb-0">Partnering on impactful technological ventures that 
+                      <span class="text-primary">drive the development</span> of individual and collective awareness for
+                  </p>
+              </div>
+          </div>
+          <div class="row mt-2">
+              <div class="col-md-12">
+                  <h1 class="display-5">a better life and 
+                      <span class="text-primary">human unity</span>
+                  </h1>
+              </div>
+          </div>
+          <div class="row mt-2">
+              <div class="col-md-12">
+                  <h6>SmartApe. All rights reserved. © 2023.</h6>
+              </div>
+          </div>
+          <div class="row mt-3">
+              <div class="col-md-4">
+                  <img src="img/facebook.jpeg" alt="Botón 1" class="img-fluid rounded" role="button">
+              </div>
+              <div class="col-md-4">
+                  <img src="img/instagram.png" alt="Botón 2" class="img-fluid rounded" role="button">
+              </div>
+              <div class="col-md-4">
+                  <img src="img/in.png" alt="Botón 3" class="img-fluid rounded" role="button">
+              </div>
+          </div>
+      </div>
+</section>
+
+<script src="http://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
