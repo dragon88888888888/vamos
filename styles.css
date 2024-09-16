@@ -1,192 +1,212 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
 
-:root {
-  --bg-gradient: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
-}
+/* 
+  Estilos generales para todos los elementos
+  - Elimina márgenes y rellenos por defecto para asegurar consistencia.
+*/
 * {
-    margin: 0 ;
-    padding: 0;
-    
+  margin: 0; 
+  padding: 0;
 }
 
+/* 
+  Estilos para el cuerpo de la página
+  - Define la fuente, el espaciado y el color de fondo del cuerpo.
+*/
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #ffffff;
-    margin: 0 ;
-    padding: 0;
+  font-family: "Nunito Sans", sans-serif !important; /* Fuente principal */
+  line-height: 1.6;                              /* Espaciado entre líneas para mejor legibilidad */
+  background-color: #ffffff;                     /* Color de fondo blanco */
+  margin: 0; 
+  padding: 0;
 }
 
+/* 
+  Estilos para las secciones
+  - Configura el diseño de las secciones de la página con posicionamiento relativo, alto mínimo y sombra.
+*/
 section {
-    position: relative;  /* Se asegura de que las secciones utilicen una posición relativa */
-    min-height: 100vh;    /* Cada sección ocupa al menos el 100% de la altura de la ventana */
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 ;
-    padding: 0;
+  position: relative;          /* Permite el uso de posicionamiento absoluto dentro de la sección */
+  min-height: 100vh;           /* Cada sección ocupa al menos el 100% de la altura de la ventana */
+  padding: 20px;               /* Espaciado interno de 20px */
+  display: flex;               /* Uso de flexbox para alinear el contenido */
+  justify-content: center;     /* Alineación horizontal centrada del contenido */
+  align-items: center;         /* Alineación vertical centrada del contenido */
+  background-color: #fff;      /* Color de fondo blanco */
+  margin-bottom: 20px;         /* Espacio debajo de cada sección */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+  margin: 0; 
+  padding: 0;
 }
 
+/* 
+  Estilos para cada sección específica
+  - Define el color de fondo para varias secciones numeradas del 1 al 9.
+*/
+.first  { background-color: #8cfc6d; } /* Color de fondo verde para la primera sección */
+.second { background-color: white; }    /* Color de fondo blanco para la segunda sección */
+.third  { background-color: white; }    /* Color de fondo blanco para la tercera sección */
+.fourth { background-color: white; }    /* Color de fondo blanco para la cuarta sección */
+.fifth  { background-color: white; }    /* Color de fondo blanco para la quinta sección */
+.sixth  { background-color: white; }    /* Color de fondo blanco para la sexta sección */
+.seventh { background-color: white; }   /* Color de fondo blanco para la séptima sección */
+.eighth { background-color: white; }    /* Color de fondo blanco para la octava sección */
+.ninth  { background-color: white; }    /* Color de fondo blanco para la novena sección */
 
-
-
-.first  {
-  background-color: #8cfc6d;
-
-}
-
-.second  {
-  background-color: white;
-}
-
-.third  {
-  background-color: white;
-}
-
-.fourth  {
-  background-color: white;
-}
-
-.fifth  {
-  background-color: white;
-}
-
-.sixth {
-  background-color: white;
-}
-
-.seventh {
-  background-color: white;
-}
-
-.eighth {
-  background-color: white;
-}
-
-.ninth {
-  background-color: white;
-}
-/*Barra de navegacion*/
-/* Alineación de los elementos */
+/* 
+  Estilos para la barra de navegación 
+  - Ajusta el espacio entre el texto y el icono del dropdown.
+*/
 .navbar-nav .dropdown-toggle i {
-  margin-left: 5px; /* Espacio entre el texto y el icono */
+  margin-left: 0; /* Espacio entre el texto y el icono */
 }
 
+
+/* 
+  Estilos para el botón de aplicar
+  - Configura el color de fondo, el texto y el estilo del botón.
+*/
 .btn-aplicar {
-background-color: #9efc81; /* Cambia el color de fondo */
-color: black;              /* Cambia el color del texto */
-padding: 16px 40px;
-font-weight: bold;
-border-radius: 4px;
-border: none;
+  background-color: #9efc81; /* Color de fondo verde claro */
+  color: black;              /* Color del texto negro */
+  padding: 16px 40px;        /* Relleno interno del botón */
+  font-weight: bold;         /* Fuente en negrita */
+  border-radius: 4px;        /* Bordes redondeados del botón */
+  border: none;              /* Sin borde */
 }
+
+/* 
+  Estilos para el dropdown de navegación
+  - Ajusta la visibilidad y transición de los elementos desplegables.
+*/
 .dropdown-toggle::after {
   display: none; /* Elimina la flecha predeterminada de Bootstrap */
 }
-/* Estilos de transición para los dropdowns */
+
 .dropdown-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
+  max-height: 0;               /* Inicialmente colapsado */
+  overflow: hidden;            /* Oculta el contenido desbordado */
+  transition: max-height 0.4s ease-in-out; /* Transición suave para la expansión */
+  opacity: 0;                  /* Inicialmente invisible */
+  visibility: hidden;          /* Inicialmente oculto */
 }
 
 .dropdown-menu.show {
-  max-height: 500px; /* Ajusta según el contenido del dropdown */
-  opacity: 1;
-  visibility: visible;
+  max-height: 500px;           /* Ajusta según el contenido del dropdown */
+  opacity: 1;                  /* Totalmente visible */
+  visibility: visible;         /* Visible */
 }
 
 /*******************************************PRIMERA SECCION*******************/
 
+/* 
+  Estilos generales para la imagen 
+  - Se asegura de que la imagen cubra toda la altura de la pantalla y mantenga sus proporciones.
+*/
 img {
-  object-fit: cover;
-  height: 100vh; /* Asegura que la imagen cubra toda la altura */
-  width: 100%;
+  object-fit: cover;  /* La imagen se escala para llenar el contenedor sin distorsión */
+  height: 100vh;      /* La imagen cubre toda la altura de la pantalla */
+  width: 100%;        /* La imagen cubre todo el ancho del contenedor */
 }
 
- /* Estilos del contenedor principal */
- .containerpr {
-  width: 100%;
-  height: 100vh; /* Altura completa de la pantalla */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* 
+  Estilos para el contenedor principal 
+  - Se asegura de que el contenedor ocupe toda la pantalla y centre su contenido.
+*/
+.containerpr {
+  width: 100%;        /* El contenedor ocupa el 100% del ancho */
+  height: 100vh;      /* El contenedor ocupa la altura completa de la pantalla */
+  display: flex;      /* Uso de flexbox para alinear el contenido */
+  align-items: center;/* Alineación vertical centrada del contenido */
+  justify-content: center; /* Alineación horizontal centrada del contenido */
 }
 
+/* 
+  Estilos para el wrapper de contenido 
+  - Configura el contenedor que envuelve tanto la columna de texto como la columna de imagen.
+*/
 .content-wrapper {
-  display: flex;
-  width: 100%;
-  height: 100%;
+  display: flex;      /* Uso de flexbox para crear un layout en fila */
+  width: 100%;        /* Ocupa todo el ancho de su contenedor */
+  height: 100%;       /* Ocupa toda la altura de su contenedor */
 }
 
-/* Estilos para la columna de texto */
+/* 
+  Estilos para la columna de texto dentro de la sección 'first'
+  - La columna ocupa el 50% del ancho y su contenido está centrado verticalmente.
+*/
 .first .text-column {
-  width: 50%; /* Ocupa el 50% del ancho */
-  padding: 5%; /* Espaciado interno del 5% para márgenes */
-  background-color: #8cfc6d; /* Color de fondo */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra verticalmente el contenido */
+  width: 50%;                     /* Ocupa el 50% del ancho disponible */
+  padding: 5%;                    /* Espaciado interno del 5% */
+  background-color: #8cfc6d;       /* Color de fondo verde */
+  display: flex;                   /* Uso de flexbox dentro de la columna */
+  flex-direction: column;          /* Los elementos se apilan verticalmente */
+  justify-content: center;         /* Centrado vertical del contenido */
 }
 
+/* 
+  Estilos para el título (h1) en la columna de texto
+  - Tamaño de fuente responsivo basado en el ancho de la pantalla.
+*/
 .first .text-column h1 {
-  font-size: 4vw; /* Tamaño de fuente ajustado a la anchura de la pantalla */
-  margin-bottom: 4%;
-  width: 82%;
-  color: #060606;
-  font-weight: 500;
+  font-size: 3rem !important;      /* Tamaño de fuente relativo al ancho de la pantalla */
+  margin-bottom: 4%;   /* Margen inferior del 4% para separar del siguiente elemento */
+  width: 82%;          /* El ancho del título es del 82% de su contenedor */
+  color: #060606;      /* Color de texto negro */
+  font-weight: 500;    /* Peso de fuente seminegrita */
 }
 
+/* 
+  Estilos para el párrafo (p) en la columna de texto
+  - Tamaño de fuente responsivo y espaciamiento adecuado.
+*/
 .first .text-column p {
-  font-size: 1.1vw; /* Tamaño de fuente ajustado a la anchura de la pantalla */
-  margin-bottom: 4%;
-  width: 80%;
-  line-height: 2;
-  margin-left: 2px;
+  font-size: 1.2rem !important;    /* Tamaño de fuente relativo al ancho de la pantalla */
+  margin-bottom: 2%;   /* Margen inferior del 4% para espaciar del siguiente elemento */
+  width: 80%;          /* El ancho del párrafo es del 80% de su contenedor */
+  line-height: 2;      /* Altura de línea para mejorar la legibilidad */
+  margin-left: 2px;    /* Ligero margen izquierdo */
 }
 
+/* 
+  Estilos para el botón de aplicar dentro de la columna de texto
+  - Botón estilizado con color de fondo y fuente personalizado.
+*/
 .first .text-column .btnaplicar {
-  padding: 4%;
-  font-size: 1.4vw;
-  background-color: #060606;
-
-  color: #8cfc6d;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  text-align: center; /* centrar texto*/
-  width: 65%;
+  padding: 4%;             /* Relleno interno del 4% */
+  font-size: 1rem !important;        /* Tamaño de fuente ajustado al ancho de la pantalla */
+  background-color: #060606;/* Fondo negro */
+  color: #8cfc6d;          /* Color de texto verde */
+  text-decoration: none;   /* Elimina el subrayado en el enlace */
+  display: inline-block;   /* Hace que el botón se comporte como un elemento en línea */
+  margin-top: 20px;        /* Margen superior para separar del contenido anterior */
+  justify-content: center; /* Centra horizontalmente el contenido del botón */
+  align-items: center;     /* Centra verticalmente el contenido del botón */
+  text-align: center;      /* Asegura que el texto dentro del botón esté centrado */
+  width: 65%;              /* El botón ocupa el 65% del ancho disponible */
 }
 
-/* Estilos para la columna de imagen */
+/* 
+  Estilos para la columna de imagen 
+  - La imagen ocupa el 50% del ancho y se mantiene dentro de los límites del contenedor.
+*/
 .image-column {
-  width: 50%; /* Ocupa el 50% del ancho */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Para que la imagen no se salga del contenedor */
+  width: 50%;              /* La columna de imagen ocupa el 50% del ancho */
+  display: flex;           /* Uso de flexbox para alinear la imagen */
+  justify-content: center; /* Centra horizontalmente la imagen */
+  align-items: center;     /* Centra verticalmente la imagen */
+  overflow: hidden;        /* Asegura que la imagen no se salga de su contenedor */
 }
 
 .image-column img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta la imagen sin distorsión */
+  width: 100%;             /* La imagen ocupa todo el ancho disponible */
+  height: 100%;            /* La imagen ocupa toda la altura disponible */
+  object-fit: cover;       /* La imagen se ajusta sin distorsión */
 }
 
-/* Responsividad para pantallas más pequeñas */
+/* 
+  Media queries para pantallas más pequeñas (máximo 768px)
+  - Reajusta el diseño para pantallas pequeñas, apilando las columnas.
+*/
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column; /* Coloca las columnas una sobre otra */
@@ -194,563 +214,735 @@ img {
 
   .text-column,
   .image-column {
-    width: 100%; /* Ambos ocupan el 100% del ancho */
-    height: 50vh; /* Cada uno ocupa la mitad de la altura de la pantalla */
+    width: 100%;        /* Las columnas ocupan el 100% del ancho */
+    height: 50vh;       /* Cada columna ocupa el 50% de la altura de la pantalla */
+  }
+
+  .text-column {
+    display: flex;
+    width: 100% !important;
+    flex-direction: column;
+    justify-content: center;  /* Centra verticalmente el contenido */
+    align-items: center;      /* Centra horizontalmente el contenido */
+    text-align: center;       /* Asegura que el texto esté centrado */
+    padding: 0 5%;            /* Espacio lateral */
   }
 
   .text-column h1 {
-    font-size: 6vw; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    font-size: 6vw !important; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    margin-top: 20% !important;
+    width: 100% !important;
+    text-align: center;
   }
 
-  .text-column p,
-  .text-column .btn {
-    font-size: 4vw;
+  .text-column p {
+    font-size: 3vw !important;
+    width: 100% !important;
+    text-align: center;
+    line-height: 1.3 !important;
   }
+
+  .text-column .btnaplicar {
+    padding: 2% !important;
+    text-align: center;
+    font-size: 3vw !important;
+  }
+  
 }
+
+
+
 
 /***********************************SEGUNDA SECCION**************************/
 
-/* Container Styles */
-/* Container Styles */
+/* 
+  Estilos para el contenedor general de la sección `.second`
+  - Alinea y centra el contenido dentro del contenedor, con relleno y margen superior.
+*/
 .second {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-  text-align: center;
-  margin-top: 4%;
+  display: flex;               /* Habilita el uso de flexbox para el contenedor */
+  justify-content: center;     /* Centra horizontalmente el contenido */
+  align-items: center;         /* Centra verticalmente el contenido */
+  padding: 40px 20px;          /* Relleno interno del contenedor */
+  text-align: center;          /* Alinea el texto al centro */
+  margin-top: 4%;              /* Espacio superior del contenedor */
 }
 
+/* 
+  Estilos para el contenedor interno `.container` dentro de `.second`
+  - Define el ancho máximo y el centrado del contenedor con relleno y posición relativa.
+*/
 .second .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  position: relative; /* Necesario para posicionar el texto absolutamente dentro de este contenedor */
+  max-width: 1200px;           /* Ancho máximo del contenedor */
+  margin: 0 auto;              /* Centra el contenedor horizontalmente */
+  padding: 40px 20px;          /* Relleno interno del contenedor */
+  position: relative;          /* Posicionamiento relativo para permitir posicionar elementos hijos */
 }
 
+/* 
+  Estilos para el contenido dentro del contenedor `.content`
+  - Usa flexbox para alinear elementos horizontalmente con espacio entre ellos.
+*/
 .second .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex;               /* Habilita el uso de flexbox para el contenido */
+  align-items: center;         /* Centra verticalmente el contenido */
+  justify-content: space-between; /* Espacio distribuido entre los elementos */
 }
 
-/* Left Text Block */
+/* 
+  Estilos para el bloque de texto a la izquierda `.text-left`
+  - Posiciona el texto absolutamente en la sección, con color y ajustes de posición.
+*/
 .second .text-left {
- 
-  text-align: start;
-  color: #060606;
-  position: absolute; /* Posiciona el texto encima de las cajas */
-  top: 17vh; /* Ajusta según sea necesario */
-  left: 6.5vh; /* Ajusta según sea necesario */
-  z-index: 10; /* Asegúrate de que el texto esté por encima de las cajas */
+  text-align: start;           /* Alinea el texto al inicio (izquierda) */
+  color: #060606;              /* Color del texto */
+  position: absolute;          /* Posicionamiento absoluto dentro del contenedor relativo */
+  top: 17vh;                   /* Ajuste desde la parte superior */
+  left: 6.5vh;                 /* Ajuste desde la izquierda */
+  z-index: 10;                 /* Asegura que el texto esté por encima de otros elementos */
 }
 
+/* 
+  Estilos para el título dentro del bloque de texto a la izquierda `.text-left h4`
+  - Ajusta el tamaño y el margen del título.
+*/
 .second .text-left h4 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  
+  font-size: 2.8rem;           /* Tamaño de fuente del título */
+  margin-bottom: 20px;         /* Espacio debajo del título */
 }
 
+/* 
+  Estilos para el párrafo dentro del bloque de texto a la izquierda `.text-left p`
+  - Ajusta el tamaño de fuente, la altura de línea y el margen.
+*/
 .second .text-left p {
-  font-size: 1vw;
-  line-height: 1.5;
-  margin-left: 0;
+  font-size: 1vw;              /* Tamaño de fuente del párrafo */
+  line-height: 1.5;            /* Altura de línea para mejorar la legibilidad */
+  margin-left: 0;              /* Margen izquierdo del párrafo */
 }
 
-/* Right Text Blocks */
+/* 
+  Estilos para el bloque de texto a la derecha `.text-right`
+  - Configura el ancho y la posición relativa para el bloque.
+*/
 .second .text-right {
-  width: 50%;
-  position: relative; /* Para que los elementos hijos se posicionen en relación a este contenedor */
+  width: 50%;                  /* Ancho del bloque de texto a la derecha */
+  position: relative;          /* Posicionamiento relativo para los elementos hijos */
 }
 
+/* 
+  Estilos para las cajas dentro del bloque de texto a la derecha `.box`
+  - Define el tamaño, el relleno, el margen y la posición de las cajas.
+*/
 .second .box {
-  padding: 20px;
-  height: 35vh;
-  width: 130%; /* Aumenta el tamaño de las cajas */
-  margin-left:70%; /* Mueve las cajas hacia la izquierda */
-  position: relative; /* Necesario para colocar los íconos dentro de las cajas */
-  margin-bottom: 15px;
+  padding: 20px;               /* Relleno interno de las cajas */
+  height: 35vh;                /* Altura de las cajas */
+  width: 130%;                 /* Ancho de las cajas (mayor al 100% para superposición) */
+  margin-left: 70%;            /* Mueve las cajas hacia la izquierda */
+  position: relative;          /* Posicionamiento relativo para los íconos dentro de las cajas */
+  margin-bottom: 15px;         /* Espacio debajo de las cajas */
 }
 
+/* 
+  Estilos para el fondo de las cajas con color teal `.teal-bg` y verde `.green-bg`
+  - Define los colores de fondo para las cajas.
+*/
 .second .teal-bg {
-  background-color: #41e5c6; /* Teal background */
+  background-color: #41e5c6;   /* Fondo teal para la primera caja */
 }
 
 .second .green-bg {
-  background-color: #8cfc6d; /* Green background */
+  background-color: #8cfc6d;   /* Fondo verde para la segunda caja */
 }
 
-/* Mantén el tamaño y posición del icono */
+/* 
+  Estilos para el icono personalizado dentro de las cajas `.custom-icon`
+  - Define el tamaño y la posición de los iconos dentro de las cajas.
+*/
 .second .custom-icon {
-  width: 50px;
-  height: 50px;
-  position: absolute;
+  width: 50px;                 /* Ancho del icono */
+  height: 50px;                /* Altura del icono */
+  position: absolute;          /* Posicionamiento absoluto dentro de las cajas */
 }
 
-/* Icono en la esquina superior izquierda de la primera caja */
+/* 
+  Estilos para el icono dentro de la primera caja con fondo teal `.teal-bg`
+  - Posiciona el icono en la esquina superior izquierda.
+*/
 .second .teal-bg .custom-icon {
-  top: 15px;
-  left: 15px;
+  top: 15px;                   /* Ajuste desde la parte superior */
+  left: 15px;                  /* Ajuste desde la izquierda */
 }
 
-/* Icono en la esquina inferior izquierda de la segunda caja */
+/* 
+  Estilos para el icono dentro de la segunda caja con fondo verde `.green-bg`
+  - Posiciona el icono en la esquina inferior izquierda.
+*/
 .second .green-bg .custom-icon {
-  bottom: 15px;
-  left: 15px;
+  bottom: 15px;                /* Ajuste desde la parte inferior */
+  left: 15px;                  /* Ajuste desde la izquierda */
 }
 
-/* Ajustes para centrar el texto en las cajas */
+/* 
+  Estilos para centrar el texto dentro de las cajas `.box`
+  - Usa flexbox para centrar el contenido vertical y horizontalmente.
+*/
 .second .box {
-  display: flex; /* Habilita flexbox en la caja */
-  flex-direction: column; /* Apila los elementos verticalmente */
-  justify-content: center; /* Centra el texto verticalmente */
-  align-items: center; /* Centra el texto horizontalmente */
-  position: relative; /* Mantiene el icono posicionado absolutamente */
-  padding-left: 30%; /* Deja espacio para el icono */
-  text-align: center; /* Centra el texto dentro de la caja */
+  display: flex;               /* Habilita el uso de flexbox para las cajas */
+  flex-direction: column;      /* Apila los elementos verticalmente */
+  justify-content: center;     /* Centra el contenido verticalmente */
+  align-items: center;         /* Centra el contenido horizontalmente */
+  position: relative;          /* Mantiene el icono posicionado absolutamente */
+  padding-left: 30%;           /* Deja espacio para el icono a la izquierda */
+  text-align: center;          /* Centra el texto dentro de la caja */
 }
 
-/* Ajustes del texto dentro de las cajas */
+/* 
+  Estilos para el texto dentro de las cajas `.box h5`
+  - Ajusta el tamaño de fuente, el color y el espaciado del texto.
+*/
 .second .box h5 {
-  margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: #060606;
-  width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
-  text-align: start; /* Centra el texto */
-  padding-top: 2%; /* Ajusta la distancia desde la parte superior */
-  margin-bottom: 0; /* Ajusta la distancia debajo del texto */
+  margin: 0;                   /* Elimina el margen por defecto */
+  font-size: 1.5rem;           /* Tamaño de fuente del texto */
+  line-height: 1.5;            /* Altura de línea para mejorar la legibilidad */
+  color: #060606;              /* Color del texto */
+  width: 100%;                 /* Ancho del texto (ocupa todo el ancho disponible) */
+  text-align: start;           /* Alineación del texto al inicio (izquierda) */
+  padding-top: 2%;             /* Espacio superior del texto */
+  margin-bottom: 0;            /* Elimina el margen inferior */
 }
 
-
-/* Estilos base, sin cambios */
-
-/* Responsividad para pantallas más pequeñas */
+/* 
+  Estilos responsivos para pantallas de tamaño medio (máx. 1024px)
+  - Ajusta la disposición y el tamaño del texto y las cajas para pantallas más pequeñas.
+*/
 @media (max-width: 1024px) {
   .second .text-left {
-    position: relative; /* Cambia a relativa para que se ajuste con respecto al flujo del documento */
-    top: 0;  /* Elimina la posición superior */
-    left: 0; /* Elimina la posición izquierda */
-    margin-bottom: 20px; /* Añade un margen para separar del contenido siguiente */
-    text-align: center; /* Centra el texto horizontalmente */
+    position: relative;        /* Cambia a posición relativa para ajustarse al flujo del documento */
+    top: 0;                    /* Elimina el ajuste superior */
+    left: 0;                   /* Elimina el ajuste izquierdo */
+    margin-bottom: 20px;       /* Añade margen inferior para separar del contenido siguiente */
+    text-align: center;        /* Centra el texto horizontalmente */
   }
   
   .second .text-left h4 {
-    font-size: 2.4rem; /* Ajusta el tamaño del título */
+    font-size: 2.4rem;         /* Ajusta el tamaño del título */
   }
 
   .second .text-left p {
-    font-size: 1.2rem; /* Ajusta el tamaño del párrafo */
+    font-size: 1.2rem;         /* Ajusta el tamaño del párrafo */
   }
 
   .second .content {
-    flex-direction: column; /* Alinea los elementos en columna */
+    flex-direction: column;    /* Cambia la disposición a columna para pantallas más pequeñas */
   }
 
   .second .text-right {
-    width: 100%; /* Asegura que la caja a la derecha ocupe todo el ancho disponible */
+    width: 100%;               /* Asegura que el bloque de texto a la derecha ocupe todo el ancho */
   }
 
   .second .box {
-    width: 100%;  /* Haz que las cajas ocupen el 100% del ancho */
-    margin-left: 0; /* Centra las cajas */
-    height: auto; /* Deja que la altura sea automática */
+    width: 100%;               /* Asegura que las cajas ocupen todo el ancho disponible */
+    margin-left: 0;            /* Elimina el margen izquierdo */
+    height: auto;              /* Deja que la altura sea automática */
   }
 }
 
+/* 
+  Estilos responsivos para pantallas pequeñas (máx. 768px)
+  - Ajusta el tamaño del texto y los iconos para mejorar la visualización en dispositivos móviles.
+*/
 @media (max-width: 768px) {
   .second .text-left h4 {
-    font-size: 2rem; /* Reduce el tamaño del título */
+    font-size: 2rem;           /* Reduce el tamaño del título */
   }
 
   .second .text-left p {
-    font-size: 1.1rem; /* Ajusta el tamaño del párrafo */
+    font-size: 1.1rem;         /* Ajusta el tamaño del párrafo */
   }
 
   .second .box {
-    width: 100%; /* Asegura que las cajas ocupen todo el ancho disponible */
+    width: 100%;               /* Asegura que las cajas ocupen todo el ancho disponible */
   }
 
   .second .custom-icon {
-    width: 40px; /* Reduce el tamaño del ícono */
+    width: 40px;               /* Reduce el tamaño del icono */
     height: 40px;
   }
 
   .second .box h5 {
-    font-size: 1.2rem; /* Ajusta el tamaño del texto en las cajas */
+    font-size: 1.2rem;         /* Ajusta el tamaño del texto en las cajas */
   }
 }
 
-@media (max-width: 480px) {
-  .second .text-left h4 {
-    font-size: 1.6rem; /* Reduce el tamaño del título */
-  }
 
-  .second .text-left p {
-    font-size: 1rem; /* Ajusta el tamaño del párrafo */
-  }
-
-  .second .box h5 {
-    font-size: 1rem; /* Ajusta el tamaño del texto en las cajas */
-  }
-}
 
 /*++++++++++++++++++++++++DECIMA NUEVA SECCION++++++++++++++++++++*/
+/* 
+  Estilos para la sección `.ten`
+  - Configura la apariencia general de la sección con un fondo de color y centrado de contenido.
+*/
 .ten {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #6676d1;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin: 0;                     /* Elimina el margen exterior por defecto */
+  background-color: #6676d1;    /* Color de fondo de la sección */
+  color: white;                 /* Color del texto */
+  display: flex;                /* Usa flexbox para organizar el contenido */
+  justify-content: center;      /* Centra horizontalmente el contenido */
+  align-items: center;          /* Centra verticalmente el contenido */
+  height: 100vh;                /* Altura de la sección igual a la altura de la ventana */
 }
+
+/* 
+  Estilos para el contenedor dentro de `.ten`
+  - Organiza el contenido con espacio entre los elementos.
+*/
 .ten .container {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
+  display: flex;                /* Usa flexbox para el contenedor */
+  justify-content: space-between; /* Espacio entre el texto y los porcentajes */
+  width: 80%;                   /* Ancho del contenedor */
 }
+
+/* 
+  Estilos para el bloque de texto `.text` dentro de `.ten`
+  - Ajusta el tamaño de fuente, el ancho máximo y los márgenes.
+*/
 .ten .text {
-  font-size: 2.7rem;
-  line-height: 1.5;
-  max-width: 50%;
-  margin-top: -5%;
-  margin-left: -11%;
-  
+  font-size: 2.7rem;            /* Tamaño de fuente del texto */
+  line-height: 1.5;             /* Altura de línea para el texto */
+  max-width: 50%;               /* Ancho máximo del texto */
+  margin-top: -5%;              /* Margen superior negativo para ajustar la posición */
+  margin-left: -11%;            /* Margen izquierdo negativo para ajustar la posición */
 }
+
+/* 
+  Estilos para la sección de porcentajes `.percentages` dentro de `.ten`
+  - Organiza los porcentajes en una fila con espacio entre ellos.
+*/
 .ten .percentages {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 45%;
-  text-align: start;
-  margin-top: -10%;
+  display: flex;                /* Usa flexbox para la organización */
+  align-items: center;          /* Centra verticalmente los porcentajes */
+  justify-content: space-between; /* Espacio entre los porcentajes */
+  width: 45%;                   /* Ancho de la sección de porcentajes */
+  text-align: start;            /* Alinea el texto al inicio */
+  margin-top: -10%;             /* Margen superior negativo para ajustar la posición */
 }
+
+/* 
+  Estilos para cada bloque de porcentaje `.percentage`
+  - Configura la alineación del texto dentro del bloque de porcentaje.
+*/
 .ten .percentage {
-  text-align: center;
+  text-align: center;           /* Alinea el texto al centro */
 }
+
+/* 
+  Estilos para el valor del porcentaje `.value` dentro de `.percentage`
+  - Ajusta el tamaño de fuente del valor numérico del porcentaje.
+*/
 .ten .percentage .value {
-  font-size: 15vh;
-  
+  font-size: 15vh;              /* Tamaño de fuente del valor numérico */
 }
+
+/* 
+  Estilos para la etiqueta del porcentaje `.label` dentro de `.percentage`
+  - Ajusta el tamaño de fuente y los márgenes de la etiqueta.
+*/
 .ten .percentage .label {
-  font-size: 16px;
-  margin-top: -15%;
-  margin-left: -40%;
+  font-size: 16px;              /* Tamaño de fuente de la etiqueta */
+  margin-top: -15%;             /* Margen superior negativo para ajustar la posición */
+  margin-left: -40%;            /* Margen izquierdo negativo para ajustar la posición */
 }
 
-/* Estilos base, sin cambios */
-
-/* Responsividad para pantallas medianas */
+/* 
+  Estilos responsivos para pantallas medianas (máx. 1024px)
+  - Ajusta la disposición y el tamaño del contenido para mejorar la visualización en pantallas medianas.
+*/
 @media (max-width: 1024px) {
   .ten .container {
-    flex-direction: row; /* Mantén el contenido en fila */
-    justify-content: space-between; /* Asegura que el texto y los porcentajes estén separados */
-    width: 90%; /* Ajusta el ancho del contenedor */
+    flex-direction: row;        /* Mantiene el contenido en una fila */
+    justify-content: space-between; /* Asegura separación entre el texto y los porcentajes */
+    width: 90%;                 /* Ajusta el ancho del contenedor */
   }
 
   .ten .text {
-    font-size: 2.2rem; /* Reduce el tamaño del texto */
-    max-width: 55%; /* Ajusta el ancho del texto para que tenga más espacio */
-    margin-left: 0; /* Elimina el margen negativo izquierdo */
-    margin-top: 0; /* Ajusta el margen superior */
-    text-align: left; /* Mantén el texto alineado a la izquierda */
+    font-size: 2.2rem;          /* Reduce el tamaño del texto */
+    max-width: 100%;            /* Ajusta el ancho máximo del texto */
+    margin-left: 0;             /* Elimina el margen izquierdo negativo */
+    margin-top: 0;              /* Elimina el margen superior negativo */
+    text-align: left;           /* Mantiene el texto alineado a la izquierda */
   }
 
   .ten .percentages {
-    width: 40%; /* Ajusta el ancho de la sección de porcentajes */
-    margin-top: 0; /* Elimina el margen superior negativo */
+    width: 40%;                 /* Ajusta el ancho de la sección de porcentajes */
+    margin-top: 15%;            /* Elimina el margen superior negativo */
     justify-content: space-around; /* Distribuye uniformemente los porcentajes */
   }
 
   .ten .percentage .value {
-    font-size: 12vh; /* Reduce el tamaño de los valores numéricos */
+    font-size: 12vh;            /* Reduce el tamaño de los valores numéricos */
   }
 
   .ten .percentage .label {
-    font-size: 14px; /* Ajusta el tamaño de las etiquetas */
-    margin-top: 0; /* Elimina el margen superior negativo */
-    margin-left: 0; /* Elimina el margen izquierdo */
+    font-size: 20px;            /* Ajusta el tamaño de las etiquetas */
+    margin-top: 0;              /* Elimina el margen superior negativo */
+    margin-left: 0;             /* Elimina el margen izquierdo negativo */
+  }
+
+  br {
+    display: none;              /* Oculta los saltos de línea */
   }
 }
 
-/* Responsividad para pantallas pequeñas */
+/* 
+  Estilos responsivos para pantallas pequeñas (máx. 768px)
+  - Ajusta la disposición y el tamaño del contenido para mejorar la visualización en pantallas más pequeñas.
+*/
 @media (max-width: 768px) {
   .ten {
-    padding: 20px; /* Añade padding para evitar que el contenido toque los bordes */
+    padding: 20px;             /* Añade relleno para evitar que el contenido toque los bordes */
   }
 
   .ten .container {
-    flex-direction: column; /* Para pantallas más pequeñas, coloca el contenido en columna */
-    align-items: flex-start; /* Mantén el texto alineado a la izquierda */
+    flex-direction: column;    /* Organiza el contenido en columna */
+    align-items: flex-start;  /* Mantiene el texto alineado a la izquierda */
   }
 
   .ten .text {
-    font-size: 1.8rem; /* Reduce el tamaño del texto */
-    width: 100%; /* Haz que el texto ocupe el ancho completo */
-    text-align: left; /* Alinea el texto a la izquierda */
-    margin-bottom: 20px; /* Añade margen inferior para separar del siguiente contenido */
+    font-size: 1.8rem;         /* Reduce el tamaño del texto */
+    width: 100%;               /* Hace que el texto ocupe el ancho completo */
+    text-align: center;        /* Alinea el texto al centro */
+    margin-bottom: 20px;       /* Añade margen inferior para separar del contenido siguiente */
   }
 
   .ten .percentages {
-    width: 100%; /* Haz que los porcentajes ocupen todo el ancho */
-    justify-content: space-between; /* Mantén los porcentajes distribuidos */
-    margin-top: 0; /* Ajusta el margen superior */
+    width: 100%;               /* Hace que la sección de porcentajes ocupe todo el ancho disponible */
+    justify-content: space-between; /* Mantiene los porcentajes distribuidos */
+    margin-top: 15%;           /* Ajusta el margen superior */
   }
 
   .ten .percentage .value {
-    font-size: 10vh; /* Ajusta el tamaño del valor numérico */
+    font-size: 5vh;            /* Ajusta el tamaño del valor numérico */
   }
 
   .ten .percentage .label {
-    font-size: 12px; /* Ajusta el tamaño de las etiquetas */
+    font-size: 18px;           /* Ajusta el tamaño de las etiquetas */
   }
 }
 
-@media (max-width: 480px) {
-  .ten .text {
-    font-size: 1.5rem; /* Reduce el tamaño del texto */
-    margin-bottom: 15px; /* Ajusta el margen inferior */
-  }
-
-  .ten .percentage .value {
-    font-size: 8vh; /* Ajusta el tamaño de los valores numéricos */
-  }
-
-  .ten .percentage .label {
-    font-size: 10px; /* Ajusta el tamaño de las etiquetas */
-  }
-}
 
 /***************************TERCERA SECCION *********************/
-
+/* 
+  Estilos para la sección `.third`
+  - Configura la apariencia general de la sección, incluyendo la alineación del texto y el diseño de las tarjetas.
+*/
 .third .main-container {
-  text-align: center;
+  text-align: center; /* Centra el texto dentro del contenedor principal */
 }
 
+/* 
+  Estilos para el título `h1` dentro de `.third`
+  - Configura el tamaño y color del título.
+*/
 .third h1 {
-  font-size: 24px;
-  color: #000;
-  
+  font-size: 24px;       /* Tamaño de fuente del título */
+  color: #000;           /* Color del texto del título */
 }
 
+/* 
+  Estilos para el contenedor de tarjetas `.cards-container` dentro de `.third`
+  - Configura la disposición y el ancho del contenedor de las tarjetas.
+*/
 .third .cards-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  width: 150%;
-  margin-left: -25%;
+  display: flex;                /* Usa flexbox para organizar las tarjetas en fila */
+  justify-content: center;      /* Centra horizontalmente las tarjetas */
+  margin-top: 20px;             /* Añade espacio arriba del contenedor */
+  width: 150%;                  /* Ancho del contenedor de tarjetas, mayor al 100% para efecto de desbordamiento */
+  margin-left: -25%;            /* Ajusta la posición hacia la izquierda */
 }
 
+/* 
+  Estilos para las tarjetas `.card` dentro de `.third`
+  - Configura el tamaño, el margen, el padding y otros estilos de las tarjetas.
+*/
 .third .card {
-  width: 150%;
-  height: 80vh;
-  margin: 8px;
-  padding: 29px;
-  color: #000;
-  position: relative;
-  border-radius: 0;
-  border: none;
-  align-items: start;
-  justify-content: center;
-
+  width: 150%;                  /* Ancho de cada tarjeta, mayor al 100% para efecto de desbordamiento */
+  height: 80vh;                 /* Altura de la tarjeta como un porcentaje de la altura de la ventana */
+  margin: 8px;                  /* Espacio alrededor de cada tarjeta */
+  padding: 29px;                /* Espacio interno dentro de la tarjeta */
+  color: #000;                  /* Color del texto dentro de la tarjeta */
+  position: relative;           /* Necesario para posicionar elementos dentro de la tarjeta */
+  border-radius: 0;            /* Sin bordes redondeados */
+  border: none;                 /* Sin borde */
+  align-items: start;           /* Alinea los elementos al inicio verticalmente */
+  justify-content: center;      /* Centra el contenido horizontalmente */
 }
 
-.third .card h2, p, .costs, .apply-btn, .apply-btn2{
-  margin-left: 15%;
+/* 
+  Estilos para el texto dentro de las tarjetas `.card` en `.third`
+  - Ajusta el margen y el alineamiento del texto y otros elementos dentro de las tarjetas.
+*/
+.third .card h2, p, .costs, .apply-btn, .apply-btn2 {
+  margin-left: 15%;            /* Añade margen izquierdo a todos estos elementos */
 }
 
 .third .card h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;           /* Tamaño de fuente del subtítulo */
+  margin-bottom: 10px;         /* Espacio debajo del subtítulo */
 }
 
 .third .card p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  text-align: left;
-
-  line-height: 2;
+  font-size: 16px;             /* Tamaño de fuente del párrafo */
+  margin-bottom: 20px;         /* Espacio debajo del párrafo */
+  text-align: left;            /* Alinea el texto a la izquierda */
+  line-height: 2;              /* Altura de línea para el párrafo */
 }
 
 .third .card .costs {
-  font-size: 25px;
-  font-weight: 550;
-  color: #060606;
+  font-size: 25px;             /* Tamaño de fuente del costo */
+  font-weight: 550;            /* Peso de fuente para el costo */
+  color: #060606;              /* Color del texto del costo */
 }
 
+/* 
+  Estilos para los botones `.apply-btn` y `.apply-btn2` dentro de `.card` en `.third`
+  - Configura la apariencia y el diseño de los botones de aplicación.
+*/
 .third .card .apply-btn {
-  background-color: #000;
-  color: #fff;
-  padding: 15px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;  
-  color: #8cfc6d;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  text-align: center; /* centrar texto*/
-  width: 35%;
+  background-color: #000;      /* Color de fondo del botón */
+  color: #8cfc6d;              /* Color del texto del botón */
+  padding: 15px 20px;          /* Espacio interno del botón */
+  text-decoration: none;       /* Elimina el subrayado del texto del botón */
+  font-size: 16px;             /* Tamaño de fuente del texto del botón */
+  border: none;                /* Sin borde */
+  cursor: pointer;             /* Cambia el cursor a una mano al pasar sobre el botón */
+  display: inline-block;       /* Permite ajustar el ancho y altura del botón */
+  margin-top: 20px;            /* Espacio arriba del botón */
+  width: 35%;                  /* Ancho del botón */
+  text-align: center;          /* Centra el texto dentro del botón */
+  justify-content: center;     /* Centra horizontalmente el contenido del botón */
+  align-items: center;         /* Centra verticalmente el contenido del botón */
 }
 
 .third .card .apply-btn2 {
-  background-color: #000;
-  color: #fff;
-  padding: 15px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;  
-  color: #41e5c6;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  text-align: center; /* centrar texto*/
-  width: 35%;
+  background-color: #000;      /* Color de fondo del segundo botón */
+  color: #41e5c6;              /* Color del texto del segundo botón */
+  padding: 15px 20px;          /* Espacio interno del segundo botón */
+  text-decoration: none;       /* Elimina el subrayado del texto del segundo botón */
+  font-size: 16px;             /* Tamaño de fuente del texto del segundo botón */
+  border: none;                /* Sin borde */
+  cursor: pointer;             /* Cambia el cursor a una mano al pasar sobre el botón */
+  display: inline-block;       /* Permite ajustar el ancho y altura del segundo botón */
+  margin-top: 20px;            /* Espacio arriba del segundo botón */
+  width: 35%;                  /* Ancho del segundo botón */
+  text-align: center;          /* Centra el texto dentro del segundo botón */
+  justify-content: center;     /* Centra horizontalmente el contenido del segundo botón */
+  align-items: center;         /* Centra verticalmente el contenido del segundo botón */
 }
 
+/* 
+  Estilos para los íconos dentro de las tarjetas `.icon` y `.icon2` en `.third`
+  - Configura la posición y el tamaño de los íconos dentro de las tarjetas.
+*/
 .third .card .icon {
-  position: absolute;
-  opacity: 0.1;
+  position: absolute;           /* Posiciona el ícono de forma absoluta dentro de la tarjeta */
+  opacity: 0.1;                /* Establece la opacidad del ícono */
 }
 
 .third .icon img {
-  max-width: 65%; /* Ajusta el ancho máximo al 100% del contenedor */
-  height: auto;    /* Ajusta la altura automáticamente */
-  margin-left: 55%;
-  margin-bottom: -250px;
+  max-width: 65%;              /* Ancho máximo del ícono ajustado al 65% del contenedor */
+  height: auto;                /* Ajusta la altura automáticamente */
+  margin-left: 55%;            /* Ajusta el margen izquierdo del ícono */
+  margin-bottom: -250px;       /* Ajusta el margen inferior del ícono */
 }
+
 .third .icon2 img {
-  max-width: 40%; /* Ajusta el ancho máximo al 100% del contenedor */
-  height: auto;    /* Ajusta la altura automáticamente */
-  margin-left: 40%;
-  top: 50%;
-  position: absolute;
-  opacity: 0.1;
+  max-width: 40%;              /* Ancho máximo del segundo ícono ajustado al 40% del contenedor */
+  height: auto;                /* Ajusta la altura automáticamente */
+  margin-left: 40%;            /* Ajusta el margen izquierdo del segundo ícono */
+  top: 50%;                    /* Ajusta la posición vertical del segundo ícono */
+  position: absolute;          /* Posiciona el segundo ícono de forma absoluta dentro de la tarjeta */
+  opacity: 0.1;                /* Establece la opacidad del segundo ícono */
 }
 
+/* 
+  Estilos específicos para tarjetas con la clase `.tech` dentro de `.third`
+  - Configura el color de fondo de las tarjetas tecnológicas.
+*/
 .third .card.tech {
-  background-color: #8cfc6d;
+  background-color: #8cfc6d;   /* Color de fondo para las tarjetas tecnológicas */
 }
 
+/* 
+  Estilos específicos para tarjetas con la clase `.power` dentro de `.third`
+  - Configura el color de fondo de las tarjetas de poder.
+*/
 .third .card.power {
-  background-color: #41e5c6;
+  background-color: #41e5c6;   /* Color de fondo para las tarjetas de poder */
 }
 
-/* Para pantallas medianas (tablets) */
+/* 
+  Estilos responsivos para pantallas medianas (tablets) */
 @media (max-width: 1024px) {
   .third .cards-container {
-    width: 100%;
-    margin-left: 0;
+    width: 100%;               /* Ajusta el ancho del contenedor de tarjetas al 100% */
+    margin-left: 0;            /* Elimina el margen izquierdo negativo */
   }
 
   .third .card {
-    width: 90%;
-    height: auto;
+    width: 90%;                /* Ajusta el ancho de las tarjetas */
+    height: auto;              /* Permite que la altura de las tarjetas se ajuste automáticamente */
   }
 
   .third .card h2 {
-    font-size: 2rem;
+    font-size: 2rem;           /* Reduce el tamaño de fuente del subtítulo */
   }
 
   .third .card p {
-    font-size: 14px;
+    font-size: 14px;           /* Reduce el tamaño de fuente del párrafo */
   }
 
   .third .card .apply-btn, .third .card .apply-btn2 {
-    width: 50%;
+    width: 50%;                /* Ajusta el ancho de los botones */
   }
 
-  .third .icon img, .third .icon2 img {
-    max-width: 50%;
-    margin-left: 40%;
+  .third .icon img {
+    max-width: 40%;            /* Ajusta el ancho máximo del ícono */
+    height: auto;              /* Ajusta la altura automáticamente */
+    margin-left: 50%;          /* Ajusta el margen izquierdo del ícono */
+    margin-bottom: -30%;       /* Ajusta el margen inferior del ícono */
+  }
+
+  .third .icon2 img {
+    max-width: 30%;            /* Ajusta el ancho máximo del segundo ícono */
+    height: auto;              /* Ajusta la altura automáticamente */
+    margin-left: 55%;          /* Ajusta el margen izquierdo del segundo ícono */
+    top: 50%;                  /* Ajusta la posición vertical del segundo ícono */
+    opacity: 0.1;              /* Establece la opacidad del segundo ícono */
   }
 }
 
-/* Para pantallas pequeñas (smartphones) */
+/* 
+  Estilos responsivos para pantallas pequeñas (smartphones)
+  - Ajusta la disposición y el tamaño del contenido para mejorar la visualización en pantallas más pequeñas.
+*/
 @media (max-width: 768px) {
   .third .cards-container {
-    flex-direction: column;
-    width: 100%;
-    margin-left: 0;
+    flex-direction: column;    /* Organiza las tarjetas en columna */
+    width: 100%;               /* Ajusta el ancho del contenedor de tarjetas al 100% */
+    margin-left: 0;            /* Elimina el margen izquierdo negativo */
   }
 
   .third .card {
-    width: 95%;
-    height: auto;
-    margin: 15px auto;
-    padding: 15px;
+    width: 95%;                /* Ajusta el ancho de las tarjetas */
+    height: auto;              /* Permite que la altura de las tarjetas se ajuste automáticamente */
+    margin: 15px auto;         /* Ajusta el margen alrededor de las tarjetas */
+    padding: 15px;             /* Ajusta el padding interno de las tarjetas */
   }
 
   .third .card h2 {
-    font-size: 1.8rem;
+    font-size: 1.8rem;         /* Reduce el tamaño de fuente del subtítulo */
   }
 
   .third .card p {
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: 14px;           /* Reduce el tamaño de fuente del párrafo */
+    margin-bottom: 15px;       /* Ajusta el margen inferior del párrafo */
   }
 
   .third .card .apply-btn, .third .card .apply-btn2 {
-    width: 70%;
-    padding: 10px 15px;
+    width: 35%;                /* Ajusta el ancho de los botones */
+    padding: 10px 15px;        /* Ajusta el padding interno de los botones */
   }
 
-  .third .icon img, .third .icon2 img {
-    max-width: 35%;
-    margin-left: 35%;
+  .third .icon img {
+    max-width: 40%;            /* Ajusta el ancho máximo del ícono */
+    height: auto;              /* Ajusta la altura automáticamente */
+    margin-left: 50%;          /* Ajusta el margen izquierdo del ícono */
+    margin-bottom: -30%;       /* Ajusta el margen inferior del ícono */
+  }
+
+  .third .icon2 img {
+    max-width: 30%;            /* Ajusta el ancho máximo del segundo ícono */
+    height: auto;              /* Ajusta la altura automáticamente */
+    margin-left: 55%;          /* Ajusta el margen izquierdo del segundo ícono */
+    top: 50%;                  /* Ajusta la posición vertical del segundo ícono */
+    opacity: 0.1;              /* Establece la opacidad del segundo ícono */
   }
 }
+
 
 /******************CUARTA SECCION***********************/
 
+/* 
+  Estilos para la sección `.fourth`
+  - Configura la apariencia de la sección, incluyendo el texto y las imágenes.
+*/
 .fourth .col-md-6 {
-  text-align: left;
-  
+  text-align: left; /* Alinea el texto a la izquierda dentro de la columna */
 }
 
+/* 
+  Estilos para el título `h1` y los párrafos `p` dentro de `.fourth`
+  - Configura los márgenes, el padding, el espaciado entre líneas y el ancho del texto.
+*/
 .fourth h1, .fourth p {
-  margin-left: 0; /* Asegura que ambos empiecen desde el mismo punto */
-  padding-left: 0; /* Elimina cualquier padding izquierdo adicional */
-  line-height: 2;
-  width: 80%;
-}
-.fourth h1{
-  font-size: 2.8rem;
+  margin-left: 0;   /* Asegura que el texto comience desde el mismo punto sin margen izquierdo */
+  padding-left: 0;  /* Elimina cualquier padding izquierdo adicional */
+  line-height: 2;   /* Altura de línea para mejorar la legibilidad */
+  width: 80%;       /* Ajusta el ancho del texto al 80% del contenedor padre */
 }
 
+/* 
+  Estilos específicos para el título `h1` dentro de `.fourth`
+  - Configura el tamaño de fuente del título.
+*/
+.fourth h1 {
+  font-size: 2.8rem; /* Tamaño de fuente del título */
+}
+
+/* 
+  Estilos para las imágenes con la clase `.img-thumbnail` dentro de `.fourth`
+  - Configura los márgenes, el tamaño y el borde de las imágenes.
+*/
 .fourth .img-thumbnail {
-  margin: 0; /* Elimina márgenes */
-  width: 25%; /* La imagen ocupará el 30% del ancho del contenedor padre */
-  height: auto; /* Mantiene la proporción de la imagen */
-  border: none;
+  margin: 0;         /* Elimina márgenes alrededor de la imagen */
+  width: 25%;        /* Ajusta el ancho de la imagen al 25% del ancho del contenedor padre */
+  height: auto;      /* Mantiene la proporción de la imagen automáticamente */
+  border: none;      /* Elimina el borde alrededor de la imagen */
 }
 
 /*******************QUINTA SECCION**************************************/
 
+/* 
+Estilos generales para la sección "fifth":
+- Se establece un contenedor de flexbox que centra su contenido tanto horizontal como verticalmente.
+- Se ajusta el alto para ocupar toda la pantalla del viewport (100vh).
+- El texto dentro de los elementos hijos se centrará.
+*/
 .fifth {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  text-align: center; /* Esto centra el texto dentro de los elementos hijos */
+  text-align: center; /* Centra el texto en los elementos hijos */
 }
 
+/* 
+Estilo del encabezado dentro de la sección "fifth":
+- Se establece un tamaño de fuente grande para el título.
+- Se añade un pequeño margen inferior para separar el título del contenido posterior.
+*/
 .fifth h1 {
   font-size: 2.5rem;
   margin-bottom: 5px;
 }
 
+/* 
+Estilo del subtítulo en la sección "fifth":
+- Se ajusta el tamaño y color de la fuente para el subtítulo.
+- Se añade margen inferior y se centra el texto.
+*/
 .fifth p.subtitle {
   font-size: 14px;
   color: #666;
@@ -759,74 +951,184 @@ img {
   margin-left: 0rem;
 }
 
+/* 
+Diseño de cuadrícula para los elementos dentro de "fifth":
+- Se utiliza el layout de grid con dos columnas de igual ancho.
+- Se añade un espacio entre los elementos de la cuadrícula.
+*/
 .fifth .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual ancho */
   gap: 10px;
 }
 
+/* 
+Estilos para las tarjetas dentro de la cuadrícula:
+- Cada tarjeta tiene un fondo blanco, borde y relleno interno.
+- Se alinean los elementos verticalmente al inicio y horizontalmente en fila.
+- Se ajusta la altura máxima y se oculta cualquier contenido que exceda.
+- El `box-sizing` asegura que el padding y el borde se incluyan en el tamaño total del elemento.
+*/
 .fifth .card {
   background: white;
   border: 1px solid #ddd;
   padding: 20px;
   display: flex;
-  align-items: flex-start; /* Alinea el contenido al inicio verticalmente */
-  flex-direction: row; /* Asegura que los elementos estén uno al lado del otro */
-  max-height: 130px; /* Altura mínima ajustada según la imagen */
-  overflow: hidden; /* Evita que el contenido se salga del contenedor */
-  box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+  align-items: flex-start;
+  flex-direction: row;
+  max-height: 130px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
+/* 
+Estilos para el ícono dentro de la tarjeta:
+- Se añade un margen a la derecha del ícono para separarlo del contenido.
+*/
 .fifth .card-icon {
   margin-right: 10px;
 }
 
+/* 
+Estilo de la imagen dentro del ícono de la tarjeta:
+- Se establece un tamaño del 110% para que las imágenes sean uniformes y ligeramente más grandes que su contenedor.
+- `object-fit: contain` asegura que las imágenes mantengan sus proporciones.
+*/
 .fifth .card-icon img {
-  width: 110%; /* Tamaño uniforme para todas las imágenes */
-  height: 110%; /* Asegura que la altura también sea uniforme */
-  object-fit: contain; /* Mantiene las proporciones de las imágenes */
+  width: 110%;
+  height: 110%;
+  object-fit: contain;
 }
 
+/* 
+Estilos para el contenido de la tarjeta:
+- El contenido se alinea a la izquierda y ocupa el espacio disponible.
+- Se ajustan márgenes y se asegura que el texto se ajuste al ancho del contenedor.
+*/
 .fifth .card-content {
   text-align: left;
-  flex: 1; /* Asegura que el contenido ocupe el espacio restante */
+  flex: 1;
   align-items: center;
   margin-top: 4%;
   line-height: 1;
   margin-left: -7%;
-  overflow-wrap: break-word; /* Ajusta las palabras largas al ancho del contenedor */
-  word-wrap: break-word; /* Alternativa para navegadores antiguos */
+  overflow-wrap: break-word; /* Asegura que las palabras largas no se salgan del contenedor */
+  word-wrap: break-word; /* Soporte para navegadores más antiguos */
 }
 
+/* 
+Estilos para el título de la tarjeta:
+- Se ajusta el tamaño de la fuente para el título de cada tarjeta.
+*/
 .fifth .card-title {
   font-size: 1.5rem;
 }
 
+/* 
+Estilos para la descripción de la tarjeta:
+- Se ajusta el tamaño y color del texto de la descripción.
+- El ancho está limitado al 55% para mantener el diseño limpio.
+- `white-space: normal` permite que el texto haga saltos de línea automáticamente.
+*/
 .fifth .card-description {
   font-size: 12px;
   color: #000000;
   width: 55%;
   line-height: 2;
-  white-space: normal; /* Asegura que el texto haga saltos de línea cuando sea necesario */
-  overflow-wrap: break-word; /* Asegura que las palabras largas se ajusten al ancho del contenedor */
-  word-wrap: break-word; /* Alternativa para navegadores más antiguos */
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
+
+/* 
+Media Queries para pantallas pequeñas:
+- Ajusta el diseño y las fuentes para una mejor visualización en pantallas con un ancho máximo de 768px.
+*/
+@media (max-width: 768px) {
+  .fifth h1 {
+    font-size: 2rem;
+  }
+
+  .fifth p.subtitle {
+    font-size: 1rem;
+  }
+
+  .fifth .grid {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+  }
+
+  .fifth .card {
+    padding: 15px;
+    max-height: 110px;
+  }
+
+  .fifth .card-icon img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .fifth .card-title {
+    margin-top: -3%;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .fifth .card-description {
+    font-size: 1rem;
+    width: 90%;
+  }
+  .fifth .card-description,.fifth .card-title  {
+   margin-left: 8%;
+  }
+}
+
 
 
 /******************SEXTA SECCION**************************/
 
-.sixth h1,h3,p{
-margin-left: 10%;
-text-align: left;
-
+/* 
+Estilos generales para los elementos h1, h3 y p dentro de la sección "sixth":
+- Se establece un margen izquierdo del 10% para alinear el contenido desde la izquierda.
+- El texto se alinea a la izquierda dentro de estos elementos.
+*/
+.sixth h1, .sixth h3, .sixth p {
+  margin-left: 10%;
+  text-align: left;
 }
-.sixth p{
+
+/* 
+Estilos específicos para los párrafos (p) dentro de la sección "sixth":
+- Se ajusta la altura de línea a 2 para mayor legibilidad.
+*/
+.sixth p {
   line-height: 2;
 }
+
+/* 
+Media Queries para pantallas con un ancho máximo de 768px:
+- Para los elementos h3, se añade un margen superior del 10% para mejorar la disposición del contenido en pantallas más pequeñas.
+- Los párrafos (p) tendrán un margen inferior del 10% para aumentar el espaciado y evitar que el contenido quede demasiado compacto.
+*/
+@media (max-width: 768px) {
+  .sixth h3 {
+    margin-top: 10%;
+  }
+
+  .sixth p {
+    margin-bottom: 10%;
+  }
+}
+
 /********************ELEVEN SECCION************************/
 
 
 
+/* 
+Estilos para la sección ".eleven" con dos columnas: izquierda y derecha.
+- Ambas secciones tienen un ancho del 50%, un padding de 50px y están centradas verticalmente.
+- Se evita que las columnas se salten de línea usando flex-wrap: nowrap.
+- La altura está configurada para ocupar toda la altura del viewport (100vh).
+*/
 .eleven .left-section,
 .eleven .right-section {
   width: 50%;
@@ -834,51 +1136,75 @@ text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  display: flex;
-  flex-wrap: nowrap; /* Evitar que las columnas salten de línea */
+  flex-wrap: nowrap; /* Evita que las columnas salten de línea */
   height: 100vh;
   margin: 0;
- 
 }
 
+/* 
+Estilos específicos para la sección izquierda:
+- Fondo de color #6676d1 y texto blanco.
+*/
 .eleven .left-section {
   background-color: #6676d1;
   color: white;
-  
 }
 
+/* 
+Estilos para los encabezados h2 y h1 dentro de la sección izquierda:
+- Tamaño de fuente y margen inferior ajustados para h2 y h1.
+*/
 .eleven .left-section h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 .eleven .left-section h1 {
-  font-size: 3.5vw;
+  font-size: 3.5vw; /* Tamaño de fuente relativo al ancho del viewport */
   margin-bottom: 20px;
 }
 
+/* 
+Estilos para los párrafos dentro de la sección izquierda:
+- Tamaño de fuente y margen inferior ajustados.
+*/
 .eleven .left-section p {
   font-size: 18px;
   margin-bottom: 10px;
   margin-left: 0;
 }
 
+/* 
+Estilos para la sección derecha:
+- Fondo blanco.
+*/
 .eleven .right-section {
   background-color: white;
 }
 
+/* 
+Estilos para las imágenes en el carrusel:
+- Tamaño y forma redondeada (bordes 50%).
+*/
 .eleven .carousel-inner img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  
 }
 
+/* 
+Estilos para los elementos del carrusel:
+- Alineación vertical y margen inferior ajustado.
+*/
 .eleven .carousel-inner .d-flex {
   align-items: center;
   margin-bottom: 10px;
 }
 
+/* 
+Estilos para los elementos del carrusel (item):
+- Ajustes en el tamaño del título, el rol y la cita.
+*/
 .eleven .carousel-item h3 {
   width: 100%;
   margin-bottom: 0.2rem;
@@ -900,12 +1226,20 @@ text-align: left;
   margin-left: 0;
 }
 
+/* 
+Estilos para el contenedor de contenido:
+- Texto centrado y ancho máximo de 600px con márgenes automáticos para centrarlo horizontalmente.
+*/
 .eleven .content-container {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* 
+Estilos para los iconos de control del carrusel:
+- Tamaño, forma redondeada y color de fondo ajustados.
+*/
 .eleven .carousel-control-prev-icon,
 .eleven .carousel-control-next-icon {
   border-radius: 50%;
@@ -915,6 +1249,10 @@ text-align: left;
   margin-left: -110%;
 }
 
+/* 
+Estilos para los indicadores del carrusel:
+- Posicionamiento, tamaño y color ajustados.
+*/
 .carousel-indicators {
   position: absolute;
   bottom: -20%; /* Ajusta este valor para mover los indicadores hacia abajo */
@@ -927,14 +1265,68 @@ text-align: left;
 .carousel-indicators button {
   width: 15px;  /* Ajusta el tamaño de los indicadores */
   height: 15px;
-
   background-color: #6676d1 !important; /* Color de los indicadores */
   border: none;
   margin: 12px !important; /* Espacio entre los indicadores */
 }
 
+/* 
+Media Queries para pantallas con un ancho máximo de 768px:
+- Cambia la disposición de las secciones a una columna.
+- Ajusta el tamaño de las fuentes y márgenes para una mejor visualización en dispositivos móviles.
+*/
+@media (max-width: 768px) {
+  .eleven {
+    display: flex;
+    flex-direction: column; /* Cambia a disposición vertical */
+  }
+
+  .eleven .left-section,
+  .eleven .right-section {
+    width: 100%; /* Ambas secciones ocupan el 100% del ancho */
+    height: 50vh; /* Cada sección ocupa la mitad de la altura de la pantalla */
+  }
+
+  .eleven .left-section {
+    order: 1; /* Asegura que la sección izquierda aparezca abajo */
+    text-align: center;
+  }
+
+  .eleven .right-section {
+    order: 2; /* Asegura que la sección derecha aparezca arriba */
+  }
+
+  .eleven .left-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin-top: 15%;
+  }
+
+  .eleven .left-section h1 {
+    font-size: 2rem; /* Tamaño de fuente relativo al ancho del viewport */
+    margin-bottom: 20px;
+  }
+
+  .eleven .left-section p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .carousel-indicators {
+    margin-left: 50%; /* Ajusta la posición de los indicadores en pantallas pequeñas */
+  }
+}
+
+
 /************************SEPTIMA SECCION***********************************/
 
+/* 
+Estilos para el contenedor principal dentro de la sección ".seventh":
+- Ocupa el 100% del ancho disponible.
+- Padding lateral del 10% para evitar que el contenido toque los bordes.
+- Box-sizing: border-box asegura que el padding esté incluido en el ancho total.
+*/
 .seventh .container {
   text-align: start;
   width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
@@ -942,11 +1334,22 @@ text-align: left;
   box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
 }
 
+/* 
+Estilos para los encabezados h1 dentro de la sección ".seventh":
+- Tamaño de fuente relativo al ancho del viewport.
+*/
 .seventh h1 {
   text-align: start;
   font-size: 3vw;
 }
 
+/* 
+Estilos para los párrafos dentro de la sección ".seventh":
+- Color de texto #666.
+- Margen inferior de 2em para separar párrafos.
+- Texto alineado a la izquierda.
+- Margen izquierdo eliminado.
+*/
 .seventh p {
   color: #666;
   margin-bottom: 2em;
@@ -954,6 +1357,12 @@ text-align: left;
   margin-left: 0;
 }
 
+/* 
+Estilos para el contenedor de pasos dentro de la sección ".seventh":
+- Disposición flex con espacio entre los elementos.
+- Borde y altura mínima ajustados para adaptarse al contenido.
+- Máximo ancho de 1200px y centrado horizontalmente.
+*/
 .seventh .steps {
   display: flex;
   justify-content: space-between;
@@ -965,6 +1374,12 @@ text-align: left;
   margin: 0 auto; /* Centra el contenido en pantallas más grandes */
 }
 
+/* 
+Estilos para cada paso dentro del contenedor de pasos:
+- Flex: 1 asegura que los pasos se distribuyan equitativamente.
+- Padding y borde derecho ajustados.
+- Asegura que el texto no se salga del contenedor y se ajuste adecuadamente.
+*/
 .seventh .step {
   flex: 1;
   padding: 1em;
@@ -974,14 +1389,26 @@ text-align: left;
   overflow-wrap: break-word; /* Permite que las palabras largas se ajusten dentro del contenedor */
 }
 
+/* 
+Elimina el borde derecho del último paso para evitar bordes dobles.
+*/
 .seventh .step:last-child {
   border-right: none;
 }
 
+/* 
+Estilos para los títulos h3 dentro de cada paso:
+- Margen inferior ajustado.
+*/
 .seventh .step h3 {
   margin-bottom: 0.5em;
 }
 
+/* 
+Estilos para el tiempo dentro de cada paso:
+- Fondo color #8cfc6d, texto negro.
+- Padding y márgenes ajustados.
+*/
 .seventh .step .time {
   background-color: #8cfc6d;
   color: #000000;
@@ -991,16 +1418,29 @@ text-align: left;
   margin-left: -4%; /* Si quieres que salga un poco fuera del contenedor */
 }
 
+/* 
+Estilos para los párrafos dentro de cada paso:
+- Margen y espacio blanco ajustados para permitir saltos de línea.
+*/
 .seventh .step p {
   margin: 0.5em 0;
   margin-left: 10%;
   white-space: normal; /* Permite que el texto haga saltos de línea si es necesario */
 }
 
+/* 
+Estilos para el botón de aplicar:
+- Margen superior para separación.
+*/
 .seventh .apply-button {
   margin-top: 2em;
 }
 
+/* 
+Estilos para el botón dentro de ".apply-button":
+- Color de fondo negro, texto color #8cfc6d.
+- Padding y tamaño de fuente ajustados.
+*/
 .seventh .apply-button button {
   background-color: #000;
   color: #8cfc6d;
@@ -1010,77 +1450,213 @@ text-align: left;
   font-size: 1em;
 }
 
-/***********************************OCTAVA SECTION************************/
+/* 
+Media Queries para pantallas con un ancho máximo de 768px:
+- Ajusta el padding lateral del contenedor.
+- Cambia el tamaño de fuente del título y los párrafos para mejor visualización en móviles.
+- Modifica la disposición de los pasos a una columna.
+- Ajusta el padding y los bordes de los pasos.
+- Cambia el padding y el tamaño de la fuente del botón de aplicar.
+*/
+@media (max-width: 768px) {
+  .seventh .container {
+    padding: 0 5%; /* Reduce el padding lateral */
+  }
 
+  .seventh h1 {
+    font-size: 2rem; /* Ajusta el tamaño de la fuente del título */
+  }
+
+  .seventh p {
+    margin-bottom: 1em; /* Ajusta el margen inferior */
+    font-size: 1rem;
+  }
+
+  .seventh .steps {
+    flex-direction: column; /* Cambia a disposición vertical */
+    padding: 0; /* Elimina el padding lateral */
+    gap: 1em; /* Añade un espacio entre los pasos */
+  }
+
+  .seventh .step {
+    padding: 0.5em; /* Reduce el padding */
+    border-right: none; /* Elimina el borde derecho */
+    border-bottom: 1px solid #ddd; /* Añade borde inferior */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+  }
+
+  .seventh .step:last-child {
+    border-bottom: none; /* Elimina el borde inferior del último paso */
+  }
+
+  .seventh .step .time {
+    padding: 0.2em 1em; /* Ajusta el padding del tiempo */
+    margin: 0; /* Elimina el margen */
+  }
+
+  .seventh .step p {
+    margin: 0.5em 0; /* Ajusta el margen */
+  }
+
+  .seventh .apply-button button {
+    padding: 1em 9em;
+  }
+}
+
+
+/***********************************OCTAVA SECTION************************/
+/* Estilos para la línea vertical en la clase ".eighth" */
 .eighth .vertical-line {
   width: 20%;
-  height: 100%; /* O el alto que desees */
-  background-color: #41e5c6; /* Cambia el color según tu preferencia */
-  position: fixed; /* O absolute, según cómo desees que se comporte */
-  left: 0; /* O ajusta la posición horizontal según lo necesites */
-  top: 0; /* O ajusta la posición vertical según lo necesites */
+  height: 100%; /* Altura completa del contenedor */
+  background-color: #41e5c6; /* Color de fondo */
+  position: fixed; /* Posicionamiento fijo */
+  left: 0; /* Alineación a la izquierda */
+  top: 0; /* Alineación superior */
 }
+
+/* Estilos para la sección FAQ en la clase ".eighth" */
 .eighth .faq-section {
   margin-top: 8%;
-margin-left: 20%;
-margin-bottom: 10%;
+  margin-left: 20%;
+  margin-bottom: 10%;
+  background-color: white; /* Fondo blanco */
+}
 
-  background-color: white;
-}
+/* Estilos para los encabezados h1 dentro de ".eighth" */
 .eighth h1 {
-  font-size: 3vw;
-  margin-bottom: 10px;
-  width: 100%;
+  font-size: 3vw; /* Tamaño de fuente relativo al ancho del viewport */
+  margin-bottom: 10px; /* Margen inferior */
+  width: 100%; /* Ancho completo */
 }
+
+/* Estilos para los párrafos p dentro de ".eighth" */
 .eighth p {
-  font-size: 1rem;
-  color: rgb(0, 0, 0);
-  margin-left: 0;
+  font-size: 1rem; /* Tamaño de fuente */
+  color: rgb(0, 0, 0); /* Color del texto */
+  margin-left: 0; /* Sin margen izquierdo */
 }
+
+/* Estilos para los ítems FAQ dentro de ".eighth" */
 .eighth .faq-item {
-  margin: 0;
-  border-bottom: 1px solid #ccc;
-  overflow: hidden;
+  margin: 0; /* Sin margen */
+  border-bottom: 1px solid #ccc; /* Borde inferior */
+  overflow: hidden; /* Ocultación de desbordamientos */
 }
+
+/* Estilos para la pregunta dentro de cada ítem FAQ */
 .eighth .faq-item .question {
-  background-color: white;
-  padding: 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: none;
-  outline: none;
-  font-size: 2vw;
+  background-color: white; /* Fondo blanco */
+  padding: 15px; /* Padding interno */
+  cursor: pointer; /* Cursor de puntero */
+  display: flex; /* Disposición flexible */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Alineación centrada */
+  border: none; /* Sin borde */
+  outline: none; /* Sin contorno */
+  font-size: 2vw; /* Tamaño de fuente relativo al ancho del viewport */
 }
+
+/* Efecto hover para la pregunta dentro de los ítems FAQ */
 .eighth .faq-item .question:hover {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Fondo ligeramente gris al pasar el ratón */
 }
+
+/* Estilos para la respuesta dentro de cada ítem FAQ */
 .eighth .faq-item .answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background-color: white;
-  padding: 0 15px;
+  max-height: 0; /* Altura máxima inicial de 0 */
+  overflow: hidden; /* Ocultación de desbordamientos */
+  transition: max-height 0.3s ease; /* Transición suave para ajuste de altura */
+  background-color: white; /* Fondo blanco */
+  padding: 0 15px; /* Padding interno */
 }
+
+/* Estilos para la respuesta activa dentro de cada ítem FAQ */
 .eighth .faq-item.active .answer {
-  max-height: 200px; /* Ajusta esta altura según el contenido */
-  padding: 15px;
+  max-height: 200px; /* Altura máxima ajustada para mostrar contenido */
+  padding: 15px; /* Padding interno ajustado */
 }
+
+/* Estilos para el ícono dentro de cada ítem FAQ */
 .eighth .faq-item .icon {
-  font-size: 18px;
-  transition: transform 0.3s ease;
+  font-size: 18px; /* Tamaño de fuente */
+  transition: transform 0.3s ease; /* Transición suave para rotación */
 }
+
+/* Estilos para el ícono activo dentro de cada ítem FAQ */
 .eighth .faq-item.active .icon {
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* Rotación de 180 grados para indicar visibilidad */
 }
+
+@media (max-width: 768px) {
+  .eighth .vertical-line {
+    display: none; /* Oculta la línea vertical en pantallas pequeñas */
+  }
+
+  .eighth .faq-section {
+    margin: 5% 2%; /* Ajusta los márgenes alrededor del FAQ */
+    padding: 2%; /* Añade padding interno para más espacio */
+    border-left: 5px solid #41e5c6; /* Añade una línea de margen a la izquierda con el color original */
+  }
+
+  .eighth h1 {
+    font-size: 2rem; /* Ajusta el tamaño del título */
+    margin-bottom: 1em; /* Ajusta el margen inferior */
+  }
+
+  .eighth p {
+    font-size: 1rem; /* Ajusta el tamaño de la fuente del párrafo */
+  }
+
+  .eighth .faq-item {
+    margin: 0; /* Elimina el margen alrededor de los ítems FAQ */
+    border-bottom: 1px solid #ccc; /* Mantiene el borde inferior */
+    overflow: hidden;
+  }
+
+  .eighth .faq-item .question {
+    padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+    font-size: 3.5vw; /* Ajusta el tamaño de la fuente del ítem de FAQ */
+  }
+
+  .eighth .faq-item .answer {
+    max-height: 120px; /* Ajusta la altura máxima del contenido de respuesta */
+    padding: 10px; /* Ajusta el padding interno */
+  }
+
+  .eighth .faq-item .icon {
+    font-size: 24px; /* Ajusta el tamaño del ícono */
+  }
+  .eighth .faq-item .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: white;
+    padding: 0 15px;
+    
+  }
+  .eighth .faq-item.active .answer {
+    max-height: 200px; /* Ajusta esta altura según el contenido */
+    padding: 15px;
+    
+  }
+  .eighth .faq-item .icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  .eighth .faq-item.active .icon {
+    transform: rotate(180deg);
+  }
+}
+
+
 /***************************FOOTER**********************************/
 /* CSS */
  footer {
   display: flex;
 padding-top: 5%;
   text-align: start;
-  font-family: Arial, sans-serif;
+  
   
 }
 .footer-content {
@@ -1134,4 +1710,58 @@ padding-top: 5%;
 .ninth .social-icons img {
   width: 50px;
   height: 50px;
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Pone el contenido en columna en pantallas pequeñas */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .footer-content {
+    margin-left: 0;
+    margin-bottom: 2%;
+  }
+
+  .left-logo img {
+    height: 100%; /* Asegura que la imagen cubra toda la altura del footer */
+    object-fit: cover;
+    display: none; /* Asegura que la imagen mantenga proporciones */
+    
+  }
+  .ninth .logo {
+    max-width: 30%;
+    margin-left: 0;
+  }
+
+  .ninth .social-icons {
+    margin-top: 2%;
+    margin-left: 0;
+  }
+
+  .ninth .social-icons a {
+    margin: 0 1%;
+  }
+
+  .ninth .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+  .footer-content p {
+    color: #000000;
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+   .footer-content a {
+    color: #5a7eff;
+    text-decoration: none;
+  }
+  
+   .footer-content strong {
+    font-weight:500;
+    color: #000000;
+    font-size: 2rem;
+  }
+  
 }
