@@ -148,7 +148,7 @@ img {
   - Tamaño de fuente responsivo basado en el ancho de la pantalla.
 */
 .first .text-column h1 {
-  font-size: 3rem !important;      /* Tamaño de fuente relativo al ancho de la pantalla */
+  font-size: 2.5rem !important;      /* Tamaño de fuente relativo al ancho de la pantalla */
   margin-bottom: 4%;   /* Margen inferior del 4% para separar del siguiente elemento */
   width: 82%;          /* El ancho del título es del 82% de su contenedor */
   color: #060606;      /* Color de texto negro */
@@ -160,7 +160,7 @@ img {
   - Tamaño de fuente responsivo y espaciamiento adecuado.
 */
 .first .text-column p {
-  font-size: 1.2rem !important;    /* Tamaño de fuente relativo al ancho de la pantalla */
+  font-size: 1rem !important;    /* Tamaño de fuente relativo al ancho de la pantalla */
   margin-bottom: 2%;   /* Margen inferior del 4% para espaciar del siguiente elemento */
   width: 80%;          /* El ancho del párrafo es del 80% de su contenedor */
   line-height: 2;      /* Altura de línea para mejorar la legibilidad */
@@ -1047,10 +1047,13 @@ Media Queries para pantallas pequeñas:
 @media (max-width: 768px) {
   .fifth h1 {
     font-size: 2rem;
+    margin-top: 15% !important;
+    margin-bottom: 0;
   }
 
   .fifth p.subtitle {
     font-size: 1rem;
+    margin-bottom: 0;
   }
 
   .fifth .grid {
@@ -1069,12 +1072,12 @@ Media Queries para pantallas pequeñas:
 
   .fifth .card-title {
     margin-top: -3%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     width: 100%;
   }
 
   .fifth .card-description {
-    font-size: 1rem;
+    font-size: .8rem;
     width: 90%;
   }
   .fifth .card-description,.fifth .card-title  {
@@ -1299,12 +1302,13 @@ Media Queries para pantallas con un ancho máximo de 768px:
   .eleven .left-section h2 {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    margin-top: 15%;
+    margin-top: 10%;
   }
 
   .eleven .left-section h1 {
     font-size: 2rem; /* Tamaño de fuente relativo al ancho del viewport */
     margin-bottom: 20px;
+    width: 100%;
   }
 
   .eleven .left-section p {
@@ -1315,6 +1319,10 @@ Media Queries para pantallas con un ancho máximo de 768px:
 
   .carousel-indicators {
     margin-left: 50%; /* Ajusta la posición de los indicadores en pantallas pequeñas */
+  }
+
+  .left-section{
+    height: 40% !important;
   }
 }
 
