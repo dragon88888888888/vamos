@@ -18,6 +18,7 @@ body {
   background-color: #ffffff;                     /* Color de fondo blanco */
   margin: 0; 
   padding: 0;
+  color: #000000 !important;
 }
 
 /* 
@@ -59,19 +60,30 @@ section {
 .navbar-nav .dropdown-toggle i {
   margin-left: 0; /* Espacio entre el texto y el icono */
 }
-
-
+nav .aplicar{
+  padding-right: 3rem;
+}
+nav .collapse{
+  padding-left: 5rem !important;
+}
+.encabezados{
+font-size: 1.4rem !important;
+color: #000000;
+font-weight: 600;
+padding-left: 3rem !important;
+}
 /* 
   Estilos para el botón de aplicar
   - Configura el color de fondo, el texto y el estilo del botón.
 */
 .btn-aplicar {
-  background-color: #9efc81; /* Color de fondo verde claro */
+  background-color: #90fa75; /* Color de fondo verde claro */
   color: black;              /* Color del texto negro */
   padding: 16px 40px;        /* Relleno interno del botón */
   font-weight: bold;         /* Fuente en negrita */
-  border-radius: 4px;        /* Bordes redondeados del botón */
   border: none;              /* Sin borde */
+  font-size: 1.5rem;
+  
 }
 
 /* 
@@ -98,20 +110,14 @@ section {
 
 /*******************************************PRIMERA SECCION*******************/
 
-/* 
-  Estilos generales para la imagen 
-  - Se asegura de que la imagen cubra toda la altura de la pantalla y mantenga sus proporciones.
-*/
+/* Estilos generales para la imagen */
 img {
   object-fit: cover;  /* La imagen se escala para llenar el contenedor sin distorsión */
   height: 100vh;      /* La imagen cubre toda la altura de la pantalla */
   width: 100%;        /* La imagen cubre todo el ancho del contenedor */
 }
 
-/* 
-  Estilos para el contenedor principal 
-  - Se asegura de que el contenedor ocupe toda la pantalla y centre su contenido.
-*/
+/* Estilos para el contenedor principal */
 .containerpr {
   width: 100%;        /* El contenedor ocupa el 100% del ancho */
   height: 100vh;      /* El contenedor ocupa la altura completa de la pantalla */
@@ -120,20 +126,14 @@ img {
   justify-content: center; /* Alineación horizontal centrada del contenido */
 }
 
-/* 
-  Estilos para el wrapper de contenido 
-  - Configura el contenedor que envuelve tanto la columna de texto como la columna de imagen.
-*/
+/* Estilos para el wrapper de contenido */
 .content-wrapper {
   display: flex;      /* Uso de flexbox para crear un layout en fila */
   width: 100%;        /* Ocupa todo el ancho de su contenedor */
   height: 100%;       /* Ocupa toda la altura de su contenedor */
 }
 
-/* 
-  Estilos para la columna de texto dentro de la sección 'first'
-  - La columna ocupa el 50% del ancho y su contenido está centrado verticalmente.
-*/
+/* Estilos para la columna de texto dentro de la sección 'first' */
 .first .text-column {
   width: 50%;                     /* Ocupa el 50% del ancho disponible */
   padding: 5%;                    /* Espaciado interno del 5% */
@@ -143,37 +143,38 @@ img {
   justify-content: center;         /* Centrado vertical del contenido */
 }
 
-/* 
-  Estilos para el título (h1) en la columna de texto
-  - Tamaño de fuente responsivo basado en el ancho de la pantalla.
-*/
+/* Estilos para el título (h1) en la columna de texto */
 .first .text-column h1 {
-  font-size: 2.5rem !important;      /* Tamaño de fuente relativo al ancho de la pantalla */
+  font-size: 4.3rem !important;      /* Tamaño de fuente relativo al ancho de la pantalla */
   margin-bottom: 4%;   /* Margen inferior del 4% para separar del siguiente elemento */
   width: 82%;          /* El ancho del título es del 82% de su contenedor */
   color: #060606;      /* Color de texto negro */
-  font-weight: 500;    /* Peso de fuente seminegrita */
+  font-weight: 600;    /* Peso de fuente seminegrita */
+  margin-top: 20%;
 }
 
-/* 
-  Estilos para el párrafo (p) en la columna de texto
-  - Tamaño de fuente responsivo y espaciamiento adecuado.
-*/
+/* Estilos para el párrafo (p) en la columna de texto */
 .first .text-column p {
-  font-size: 1rem !important;    /* Tamaño de fuente relativo al ancho de la pantalla */
-  margin-bottom: 2%;   /* Margen inferior del 4% para espaciar del siguiente elemento */
+  font-size: 1.3rem !important;    /* Tamaño de fuente relativo al ancho de la pantalla */
+  margin-bottom: 2%;   /* Margen inferior del 2% para espaciar del siguiente elemento */
   width: 80%;          /* El ancho del párrafo es del 80% de su contenedor */
   line-height: 2;      /* Altura de línea para mejorar la legibilidad */
   margin-left: 2px;    /* Ligero margen izquierdo */
+  font-weight: 600;
+}
+.first .text-column span {
+  font-size: 2rem !important;    /* Tamaño de fuente relativo al ancho de la pantalla */
+  margin-bottom: 4%;   /* Margen inferior del 4% para espaciar del siguiente elemento */
+  color: #000000;
+  line-height: 2;      /* Altura de línea para mejorar la legibilidad */
+  margin-left: 2px;    /* Ligero margen izquierdo */
+  font-weight: 700;
 }
 
-/* 
-  Estilos para el botón de aplicar dentro de la columna de texto
-  - Botón estilizado con color de fondo y fuente personalizado.
-*/
+/* Estilos para el botón de aplicar dentro de la columna de texto */
 .first .text-column .btnaplicar {
   padding: 4%;             /* Relleno interno del 4% */
-  font-size: 1rem !important;        /* Tamaño de fuente ajustado al ancho de la pantalla */
+  font-size: 1.5rem !important;        /* Tamaño de fuente ajustado al ancho de la pantalla */
   background-color: #060606;/* Fondo negro */
   color: #8cfc6d;          /* Color de texto verde */
   text-decoration: none;   /* Elimina el subrayado en el enlace */
@@ -183,12 +184,10 @@ img {
   align-items: center;     /* Centra verticalmente el contenido del botón */
   text-align: center;      /* Asegura que el texto dentro del botón esté centrado */
   width: 65%;              /* El botón ocupa el 65% del ancho disponible */
+  font-weight: 600;
 }
 
-/* 
-  Estilos para la columna de imagen 
-  - La imagen ocupa el 50% del ancho y se mantiene dentro de los límites del contenedor.
-*/
+/* Estilos para la columna de imagen */
 .image-column {
   width: 50%;              /* La columna de imagen ocupa el 50% del ancho */
   display: flex;           /* Uso de flexbox para alinear la imagen */
@@ -203,24 +202,40 @@ img {
   object-fit: cover;       /* La imagen se ajusta sin distorsión */
 }
 
-/* 
-  Media queries para pantallas más pequeñas (máximo 768px)
-  - Reajusta el diseño para pantallas pequeñas, apilando las columnas.
-*/
+/* Media queries para pantallas más pequeñas (máximo 1024px) */
+@media (max-width: 1024px) {
+  .first .text-column h1 {
+    font-size: 3.5rem !important;  /* Tamaño de fuente ajustado para tablets */
+  }
+
+  .first .text-column p {
+    font-size: 1rem !important;  /* Tamaño de fuente ajustado para tablets */
+  }
+
+  .first .text-column span{
+    font-size: 1.5rem !important;
+    margin-bottom: 0%;
+  }
+
+  .first .text-column .btnaplicar {
+    font-size: 1.2rem !important;  /* Tamaño de fuente ajustado para tablets */
+  }
+}
+
+/* Media queries para pantallas más pequeñas (máximo 768px) */
 @media (max-width: 768px) {
-  .content-wrapper {
+  .first .content-wrapper {
     flex-direction: column; /* Coloca las columnas una sobre otra */
   }
 
-  .text-column,
-  .image-column {
+  .first .text-column,
+  .first .image-column {
     width: 100%;        /* Las columnas ocupan el 100% del ancho */
     height: 50vh;       /* Cada columna ocupa el 50% de la altura de la pantalla */
   }
 
-  .text-column {
+  .first .text-column {
     display: flex;
-    width: 100% !important;
     flex-direction: column;
     justify-content: center;  /* Centra verticalmente el contenido */
     align-items: center;      /* Centra horizontalmente el contenido */
@@ -228,28 +243,40 @@ img {
     padding: 0 5%;            /* Espacio lateral */
   }
 
-  .text-column h1 {
+  .first .text-column h1 {
     font-size: 6vw !important; /* Ajusta el tamaño del texto en pantallas pequeñas */
-    margin-top: 20% !important;
     width: 100% !important;
     text-align: center;
   }
 
-  .text-column p {
-    font-size: 3vw !important;
+  .first .text-column p {
+    font-size: 3vw !important; /* Ajusta el tamaño del texto en pantallas pequeñas */
     width: 100% !important;
     text-align: center;
     line-height: 1.3 !important;
   }
 
-  .text-column .btnaplicar {
+  .first .text-column .btnaplicar {
     padding: 2% !important;
     text-align: center;
     font-size: 3vw !important;
   }
-  
 }
 
+/* Media queries para pantallas más pequeñas (máximo 480px) */
+@media (max-width: 480px) {
+  .first .text-column h1 {
+    font-size: 5vw !important; /* Tamaño de fuente aún más pequeño para móviles */
+  }
+
+  .first .text-column p {
+    font-size: 4vw !important; /* Tamaño de fuente aún más pequeño para móviles */
+  }
+
+  .first .text-column .btnaplicar {
+    font-size: 4vw !important; /* Tamaño de fuente aún más pequeño para móviles */
+  }
+}
 
 
 
@@ -309,6 +336,8 @@ img {
 .second .text-left h4 {
   font-size: 2.8rem;           /* Tamaño de fuente del título */
   margin-bottom: 20px;         /* Espacio debajo del título */
+  font-weight: 600;
+  color: #000000;
 }
 
 /* 
@@ -316,9 +345,10 @@ img {
   - Ajusta el tamaño de fuente, la altura de línea y el margen.
 */
 .second .text-left p {
-  font-size: 1vw;              /* Tamaño de fuente del párrafo */
+  font-size: 1rem;              /* Tamaño de fuente del párrafo */
   line-height: 1.5;            /* Altura de línea para mejorar la legibilidad */
   margin-left: 0;              /* Margen izquierdo del párrafo */
+  font-weight: 700;
 }
 
 /* 
@@ -328,6 +358,7 @@ img {
 .second .text-right {
   width: 50%;                  /* Ancho del bloque de texto a la derecha */
   position: relative;          /* Posicionamiento relativo para los elementos hijos */
+ 
 }
 
 /* 
@@ -341,6 +372,7 @@ img {
   margin-left: 70%;            /* Mueve las cajas hacia la izquierda */
   position: relative;          /* Posicionamiento relativo para los íconos dentro de las cajas */
   margin-bottom: 15px;         /* Espacio debajo de las cajas */
+  font-weight: 700;
 }
 
 /* 
@@ -410,6 +442,7 @@ img {
   text-align: start;           /* Alineación del texto al inicio (izquierda) */
   padding-top: 2%;             /* Espacio superior del texto */
   margin-bottom: 0;            /* Elimina el margen inferior */
+  font-weight: 700;
 }
 
 /* 
@@ -507,11 +540,11 @@ img {
   - Ajusta el tamaño de fuente, el ancho máximo y los márgenes.
 */
 .ten .text {
-  font-size: 2.7rem;            /* Tamaño de fuente del texto */
+  font-size: 3.1rem;            /* Tamaño de fuente del texto */
   line-height: 1.5;             /* Altura de línea para el texto */
   max-width: 50%;               /* Ancho máximo del texto */
   margin-top: -5%;              /* Margen superior negativo para ajustar la posición */
-  margin-left: -11%;            /* Margen izquierdo negativo para ajustar la posición */
+  margin-left: -5%;            /* Margen izquierdo negativo para ajustar la posición */
 }
 
 /* 
@@ -637,6 +670,7 @@ img {
 */
 .third .main-container {
   text-align: center; /* Centra el texto dentro del contenedor principal */
+  margin-top: 5rem;
 }
 
 /* 
@@ -655,9 +689,10 @@ img {
 .third .cards-container {
   display: flex;                /* Usa flexbox para organizar las tarjetas en fila */
   justify-content: center;      /* Centra horizontalmente las tarjetas */
+  align-items: center;
   margin-top: 20px;             /* Añade espacio arriba del contenedor */
-  width: 150%;                  /* Ancho del contenedor de tarjetas, mayor al 100% para efecto de desbordamiento */
-  margin-left: -25%;            /* Ajusta la posición hacia la izquierda */
+  width: 140%;                  /* Ancho del contenedor de tarjetas, mayor al 100% para efecto de desbordamiento */
+  margin-left: -20%;            /* Ajusta la posición hacia la izquierda */
 }
 
 /* 
@@ -665,7 +700,7 @@ img {
   - Configura el tamaño, el margen, el padding y otros estilos de las tarjetas.
 */
 .third .card {
-  width: 150%;                  /* Ancho de cada tarjeta, mayor al 100% para efecto de desbordamiento */
+  width: 140%;                  /* Ancho de cada tarjeta, mayor al 100% para efecto de desbordamiento */
   height: 80vh;                 /* Altura de la tarjeta como un porcentaje de la altura de la ventana */
   margin: 8px;                  /* Espacio alrededor de cada tarjeta */
   padding: 29px;                /* Espacio interno dentro de la tarjeta */
@@ -675,6 +710,7 @@ img {
   border: none;                 /* Sin borde */
   align-items: start;           /* Alinea los elementos al inicio verticalmente */
   justify-content: center;      /* Centra el contenido horizontalmente */
+  padding-right: 3rem;
 }
 
 /* 
@@ -688,18 +724,20 @@ img {
 .third .card h2 {
   font-size: 2.5rem;           /* Tamaño de fuente del subtítulo */
   margin-bottom: 10px;         /* Espacio debajo del subtítulo */
+  font-weight: 600;
 }
 
 .third .card p {
-  font-size: 16px;             /* Tamaño de fuente del párrafo */
+  font-size: 1.1rem;             /* Tamaño de fuente del párrafo */
   margin-bottom: 20px;         /* Espacio debajo del párrafo */
   text-align: left;            /* Alinea el texto a la izquierda */
   line-height: 2;              /* Altura de línea para el párrafo */
+  font-weight: 600;
 }
 
 .third .card .costs {
   font-size: 25px;             /* Tamaño de fuente del costo */
-  font-weight: 550;            /* Peso de fuente para el costo */
+  font-weight: 700;            /* Peso de fuente para el costo */
   color: #060606;              /* Color del texto del costo */
 }
 
@@ -710,59 +748,37 @@ img {
 .third .card .apply-btn {
   background-color: #000;      /* Color de fondo del botón */
   color: #8cfc6d;              /* Color del texto del botón */
-  padding: 15px 20px;          /* Espacio interno del botón */
+  padding: 20px 40px;          /* Espacio interno del botón */
   text-decoration: none;       /* Elimina el subrayado del texto del botón */
-  font-size: 16px;             /* Tamaño de fuente del texto del botón */
+  font-size: 1.3rem;             /* Tamaño de fuente del texto del botón */
   border: none;                /* Sin borde */
   cursor: pointer;             /* Cambia el cursor a una mano al pasar sobre el botón */
   display: inline-block;       /* Permite ajustar el ancho y altura del botón */
   margin-top: 20px;            /* Espacio arriba del botón */
-  width: 35%;                  /* Ancho del botón */
+  width: 40%;                  /* Ancho del botón */
   text-align: center;          /* Centra el texto dentro del botón */
   justify-content: center;     /* Centra horizontalmente el contenido del botón */
   align-items: center;         /* Centra verticalmente el contenido del botón */
+  font-weight: 600;
 }
 
 .third .card .apply-btn2 {
   background-color: #000;      /* Color de fondo del segundo botón */
   color: #41e5c6;              /* Color del texto del segundo botón */
-  padding: 15px 20px;          /* Espacio interno del segundo botón */
+  padding: 20px 40px;          /* Espacio interno del segundo botón */
   text-decoration: none;       /* Elimina el subrayado del texto del segundo botón */
-  font-size: 16px;             /* Tamaño de fuente del texto del segundo botón */
+  font-size: 1.3rem;             /* Tamaño de fuente del texto del segundo botón */
   border: none;                /* Sin borde */
   cursor: pointer;             /* Cambia el cursor a una mano al pasar sobre el botón */
   display: inline-block;       /* Permite ajustar el ancho y altura del segundo botón */
   margin-top: 20px;            /* Espacio arriba del segundo botón */
-  width: 35%;                  /* Ancho del segundo botón */
+  width: 40%;                  /* Ancho del segundo botón */
   text-align: center;          /* Centra el texto dentro del segundo botón */
   justify-content: center;     /* Centra horizontalmente el contenido del segundo botón */
   align-items: center;         /* Centra verticalmente el contenido del segundo botón */
+  font-weight: 600
 }
 
-/* 
-  Estilos para los íconos dentro de las tarjetas `.icon` y `.icon2` en `.third`
-  - Configura la posición y el tamaño de los íconos dentro de las tarjetas.
-*/
-.third .card .icon {
-  position: absolute;           /* Posiciona el ícono de forma absoluta dentro de la tarjeta */
-  opacity: 0.1;                /* Establece la opacidad del ícono */
-}
-
-.third .icon img {
-  max-width: 65%;              /* Ancho máximo del ícono ajustado al 65% del contenedor */
-  height: auto;                /* Ajusta la altura automáticamente */
-  margin-left: 55%;            /* Ajusta el margen izquierdo del ícono */
-  margin-bottom: -250px;       /* Ajusta el margen inferior del ícono */
-}
-
-.third .icon2 img {
-  max-width: 40%;              /* Ancho máximo del segundo ícono ajustado al 40% del contenedor */
-  height: auto;                /* Ajusta la altura automáticamente */
-  margin-left: 40%;            /* Ajusta el margen izquierdo del segundo ícono */
-  top: 50%;                    /* Ajusta la posición vertical del segundo ícono */
-  position: absolute;          /* Posiciona el segundo ícono de forma absoluta dentro de la tarjeta */
-  opacity: 0.1;                /* Establece la opacidad del segundo ícono */
-}
 
 /* 
   Estilos específicos para tarjetas con la clase `.tech` dentro de `.third`
@@ -770,6 +786,9 @@ img {
 */
 .third .card.tech {
   background-color: #8cfc6d;   /* Color de fondo para las tarjetas tecnológicas */
+  background-image: url('img/rendimiento.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right; /* Ajusta la posición de la imagen */
 }
 
 /* 
@@ -778,6 +797,9 @@ img {
 */
 .third .card.power {
   background-color: #41e5c6;   /* Color de fondo para las tarjetas de poder */
+  background-image: url('img/desarrollador.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right; /* Ajusta la posición de la imagen */
 }
 
 /* 
@@ -817,7 +839,7 @@ img {
     height: auto;              /* Ajusta la altura automáticamente */
     margin-left: 55%;          /* Ajusta el margen izquierdo del segundo ícono */
     top: 50%;                  /* Ajusta la posición vertical del segundo ícono */
-    opacity: 0.1;              /* Establece la opacidad del segundo ícono */
+    
   }
 }
 
@@ -865,7 +887,7 @@ img {
     height: auto;              /* Ajusta la altura automáticamente */
     margin-left: 55%;          /* Ajusta el margen izquierdo del segundo ícono */
     top: 50%;                  /* Ajusta la posición vertical del segundo ícono */
-    opacity: 0.1;              /* Establece la opacidad del segundo ícono */
+    
   }
 }
 
@@ -888,7 +910,7 @@ img {
   margin-left: 0;   /* Asegura que el texto comience desde el mismo punto sin margen izquierdo */
   padding-left: 0;  /* Elimina cualquier padding izquierdo adicional */
   line-height: 2;   /* Altura de línea para mejorar la legibilidad */
-  width: 80%;       /* Ajusta el ancho del texto al 80% del contenedor padre */
+  width: 100%;       /* Ajusta el ancho del texto al 80% del contenedor padre */
 }
 
 /* 
@@ -903,11 +925,21 @@ img {
   Estilos para las imágenes con la clase `.img-thumbnail` dentro de `.fourth`
   - Configura los márgenes, el tamaño y el borde de las imágenes.
 */
+.fourth .grid{
+  margin-left: -8%;
+}
+.fourth .text p{
+  color: #000000 !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
 .fourth .img-thumbnail {
   margin: 0;         /* Elimina márgenes alrededor de la imagen */
-  width: 25%;        /* Ajusta el ancho de la imagen al 25% del ancho del contenedor padre */
+  width: 30%;        /* Ajusta el ancho de la imagen al 25% del ancho del contenedor padre */
   height: auto;      /* Mantiene la proporción de la imagen automáticamente */
   border: none;      /* Elimina el borde alrededor de la imagen */
+  padding-left: 3rem;
+  margin-bottom: 4%;
 }
 
 /*******************QUINTA SECCION**************************************/
@@ -919,12 +951,14 @@ Estilos generales para la sección "fifth":
 - El texto dentro de los elementos hijos se centrará.
 */
 .fifth {
+  
   margin: 0;
-  padding: 0;
+  padding-top: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding-bottom: 5rem;
+  width: 100%;
   text-align: center; /* Centra el texto en los elementos hijos */
 }
 
@@ -934,7 +968,7 @@ Estilo del encabezado dentro de la sección "fifth":
 - Se añade un pequeño margen inferior para separar el título del contenido posterior.
 */
 .fifth h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 5px;
 }
 
@@ -944,8 +978,8 @@ Estilo del subtítulo en la sección "fifth":
 - Se añade margen inferior y se centra el texto.
 */
 .fifth p.subtitle {
-  font-size: 14px;
-  color: #666;
+  font-size: 1.3rem;
+  color: #000000;
   margin-bottom: 20px;
   text-align: center;
   margin-left: 0rem;
@@ -959,7 +993,8 @@ Diseño de cuadrícula para los elementos dentro de "fifth":
 .fifth .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual ancho */
-  gap: 10px;
+  gap: 1.3rem;
+
 }
 
 /* 
@@ -976,8 +1011,8 @@ Estilos para las tarjetas dentro de la cuadrícula:
   display: flex;
   align-items: flex-start;
   flex-direction: row;
-  max-height: 130px;
-  overflow: hidden;
+  max-height: auto;
+
   box-sizing: border-box;
 }
 
@@ -987,6 +1022,7 @@ Estilos para el ícono dentro de la tarjeta:
 */
 .fifth .card-icon {
   margin-right: 10px;
+
 }
 
 /* 
@@ -995,9 +1031,11 @@ Estilo de la imagen dentro del ícono de la tarjeta:
 - `object-fit: contain` asegura que las imágenes mantengan sus proporciones.
 */
 .fifth .card-icon img {
-  width: 110%;
-  height: 110%;
+  width: 8rem;
+  height: auto;
   object-fit: contain;
+  margin-top: -20%;
+  margin-left: -40%;
 }
 
 /* 
@@ -1009,11 +1047,12 @@ Estilos para el contenido de la tarjeta:
   text-align: left;
   flex: 1;
   align-items: center;
-  margin-top: 4%;
+  margin-top: 4% !important;
   line-height: 1;
-  margin-left: -7%;
+  margin-left: -12%;
   overflow-wrap: break-word; /* Asegura que las palabras largas no se salgan del contenedor */
   word-wrap: break-word; /* Soporte para navegadores más antiguos */
+  padding-bottom: 0%;
 }
 
 /* 
@@ -1021,7 +1060,9 @@ Estilos para el título de la tarjeta:
 - Se ajusta el tamaño de la fuente para el título de cada tarjeta.
 */
 .fifth .card-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  color: #000000 !important;
+  font-weight: 600;
 }
 
 /* 
@@ -1031,13 +1072,14 @@ Estilos para la descripción de la tarjeta:
 - `white-space: normal` permite que el texto haga saltos de línea automáticamente.
 */
 .fifth .card-description {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #000000;
-  width: 55%;
+  font-weight: 600;
   line-height: 2;
   white-space: normal;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  
 }
 
 /* 
@@ -1094,6 +1136,11 @@ Estilos generales para los elementos h1, h3 y p dentro de la sección "sixth":
 - Se establece un margen izquierdo del 10% para alinear el contenido desde la izquierda.
 - El texto se alinea a la izquierda dentro de estos elementos.
 */
+.sixth .container{
+  justify-content: center !important;
+
+}
+
 .sixth h1, .sixth h3, .sixth p {
   margin-left: 10%;
   text-align: left;
@@ -1105,6 +1152,9 @@ Estilos específicos para los párrafos (p) dentro de la sección "sixth":
 */
 .sixth p {
   line-height: 2;
+  font-size: 1.1rem !important;
+  font-weight: 600;
+  color: #000000;
 }
 
 /* 
@@ -1125,7 +1175,9 @@ Media Queries para pantallas con un ancho máximo de 768px:
 /********************ELEVEN SECCION************************/
 
 
-
+.eleven{
+  margin-bottom: 4rem;
+}
 /* 
 Estilos para la sección ".eleven" con dos columnas: izquierda y derecha.
 - Ambas secciones tienen un ancho del 50%, un padding de 50px y están centradas verticalmente.
@@ -1212,13 +1264,16 @@ Estilos para los elementos del carrusel (item):
   width: 100%;
   margin-bottom: 0.2rem;
   margin-left: 0;
+  text-align: start;
+  font-size: 2rem;
 }
 
 .eleven .carousel-item .role {
-  font-size: 0.9rem;
-  color: #9E9E9E;
+  font-size: 1.1rem;
+  color: #000000;
   margin-bottom: 0.8rem;
   margin-left: 0;
+  text-align: start;
 }
 
 .eleven .carousel-item .quote {
@@ -1227,6 +1282,7 @@ Estilos para los elementos del carrusel (item):
   line-height: 2;
   margin-top: 15px;
   margin-left: 0;
+  text-align: start;
 }
 
 /* 
@@ -1297,6 +1353,8 @@ Media Queries para pantallas con un ancho máximo de 768px:
 
   .eleven .right-section {
     order: 2; /* Asegura que la sección derecha aparezca arriba */
+    padding-bottom: 3rem;
+    padding-top: 3rem;
   }
 
   .eleven .left-section h2 {
