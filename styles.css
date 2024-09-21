@@ -243,12 +243,12 @@ img {
     align-items: center;      /* Centra horizontalmente el contenido */
     text-align: center;       /* Asegura que el texto esté centrado */
     padding: 0 5%;            /* Espacio lateral */
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   .first .text-column h1 {
-    font-size: 3rem ; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    font-size: 2.5rem ; /* Ajusta el tamaño del texto en pantallas pequeñas */
     width: 100% !important;
     text-align: center;
     padding-top: 2rem;
@@ -268,8 +268,8 @@ img {
   .first .text-column .btnaplicar {
     padding: 2% !important;
     text-align: center;
-    font-size: 1.5rem !important;
-    margin-bottom: 3rem;
+    font-size: 1.3rem !important;
+    
   }
   .image-column img {
     width: 100%;             /* La imagen ocupa todo el ancho disponible */
