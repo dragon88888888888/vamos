@@ -113,7 +113,7 @@ padding-left: 3rem !important;
   height: auto !important;
 }
 /* Estilos generales para la imagen */
-img {
+.first img {
   object-fit: cover;  /* La imagen se escala para llenar el contenedor sin distorsión */
   height: 100vh;      /* La imagen cubre toda la altura de la pantalla */
   width: 100%;        /* La imagen cubre todo el ancho del contenedor */
@@ -276,6 +276,17 @@ img {
     height: auto;            /* La imagen ocupa toda la altura disponible */
     object-fit: cover;       /* La imagen se ajusta sin distorsión */
   }
+
+  .navbar img{
+    height: auto;
+    width: 7rem !important;
+  }
+  .encabezados{
+    font-size: 1.4rem !important;
+    color: #000000;
+    font-weight: 600;
+    padding-left: 0% !important;
+    }
 }
 
 
