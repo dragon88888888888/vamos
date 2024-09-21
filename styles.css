@@ -280,6 +280,7 @@ padding-left: 3rem !important;
   .navbar img{
     height: auto;
     width: 7rem !important;
+    
   }
   .encabezados{
     font-size: 1.4rem !important;
@@ -1391,7 +1392,11 @@ Media Queries para pantallas con un ancho máximo de 768px:
   }
 
   .left-section{
-    height: 40% !important;
+    height: auto !important;
+  }
+
+  .right-section{
+    height: auto !important;
   }
 }
 
