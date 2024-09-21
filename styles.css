@@ -243,7 +243,8 @@ img {
     align-items: center;      /* Centra horizontalmente el contenido */
     text-align: center;       /* Asegura que el texto esté centrado */
     padding: 0 5%;            /* Espacio lateral */
-
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .first .text-column h1 {
